@@ -19,23 +19,23 @@ const createTheme = isNightMode =>
       type: isNightMode ? 'dark' : 'light',
       background: {
         default: isNightMode ? DARK_MODE_BLUE : BRIGHT_BLUE,
-        paper: isNightMode ? '#606077' : '#fff',
+        paper: isNightMode ? '#606077' : WHITE_BLUE,
         primary: isNightMode ? DARK_MODE_MEDIUM_BLUE : WHITE_BLUE,
         secondary: isNightMode ? DARK_MODE_MEDIUM_BLUE : MEDIUM_BLUE,
         dark: isNightMode ? DARK_MODE_BLUE : DARK_BROWN,
         paused: isNightMode ? '#2B2A5A' : '#FCE57E',
         retired: isNightMode ? '#d32f2f' : '#e57373',
-        hover: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
+        hover: isNightMode ? DARK_MODE_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
       },
       walletIcon: {
-        color: isNightMode ? '#fff' : DARK_BROWN,
+        color: isNightMode ? WHITE_BLUE : DARK_BROWN,
       },
       primary: {
         main: isNightMode ? ACCENT_BLUE : ACCENT_BLUE,
       },
       secondary: {
-        main: isNightMode ? '#fff' : '#F8F2EC',
+        main: isNightMode ? WHITE_BLUE : '#F8F2EC',
       },
       text: {
         primary: isNightMode ? DARK_MODE_ACCENT_BLUE : DARK_BROWN,
@@ -45,22 +45,22 @@ const createTheme = isNightMode =>
     overrides: {
       MuiButton: {
         label: {
-          color: isNightMode ? '#fff' : DARK_BROWN,
+          color: isNightMode ? WHITE_BLUE : DARK_BROWN,
         },
       },
 
       // for dropdown menu items
       MuiButtonBase: {
         root: {
-          color: isNightMode ? '#fff' : DARK_BROWN,
+          color: isNightMode ? WHITE_BLUE : DARK_BROWN,
         },
       },
       MuiCheckbox: {
         colorPrimary: {
-          color: isNightMode ? '#fff' : DARK_BROWN,
+          color: isNightMode ? WHITE_BLUE : DARK_BROWN,
         },
         colorSecondary: {
-          color: isNightMode ? '#fff' : DARK_BROWN,
+          color: isNightMode ? WHITE_BLUE : DARK_BROWN,
         },
       },
     },
