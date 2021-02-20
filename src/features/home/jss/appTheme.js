@@ -7,29 +7,38 @@ const WHITE_BLUE = '#F4FBFF';
 const MEDIUM_BLUE = '#9ADDFE';
 const DARK_BROWN = '#512808';
 
+// Dark Mode
+const DARK_MODE_BLUE = '#070C12';
+const DARK_MODE_MEDIUM_BLUE = '#111D2C';
+const DARK_MODE_ACCENT_BLUE = '#00B5EB';
+const DARK_MODE_LIGHT_BLUE = '#78D6FF';
+
 const createTheme = isNightMode =>
   createMuiTheme({
     palette: {
       type: isNightMode ? 'dark' : 'light',
       background: {
-        default: isNightMode ? '#242332' : BRIGHT_BLUE,
+        default: isNightMode ? DARK_MODE_BLUE : BRIGHT_BLUE,
         paper: isNightMode ? '#606077' : '#fff',
-        primary: isNightMode ? '#505067' : WHITE_BLUE,
-        secondary: isNightMode ? '#3B3A4D' : MEDIUM_BLUE,
-        dark: isNightMode ? '#2B2A3D' : DARK_BROWN,
+        primary: isNightMode ? DARK_MODE_MEDIUM_BLUE : WHITE_BLUE,
+        secondary: isNightMode ? DARK_MODE_MEDIUM_BLUE : MEDIUM_BLUE,
+        dark: isNightMode ? DARK_MODE_BLUE : DARK_BROWN,
         paused: isNightMode ? '#2B2A5A' : '#FCE57E',
         retired: isNightMode ? '#d32f2f' : '#e57373',
-        hover: isNightMode ? '#2B2A3D' : ACCENT_BLUE,
-        border: isNightMode ? '#2B2A3D' : ACCENT_BLUE,
+        hover: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
+        border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
+      },
+      walletIcon: {
+        color: isNightMode ? '#fff' : DARK_BROWN,
       },
       primary: {
-        main: isNightMode ? '#fff' : ACCENT_BLUE,
+        main: isNightMode ? ACCENT_BLUE : ACCENT_BLUE,
       },
       secondary: {
         main: isNightMode ? '#fff' : '#F8F2EC',
       },
       text: {
-        primary: isNightMode ? '#fff' : DARK_BROWN,
+        primary: isNightMode ? DARK_MODE_ACCENT_BLUE : DARK_BROWN,
         secondary: isNightMode ? '#B0B0DD' : '#00000066',
       },
     },
