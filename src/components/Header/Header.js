@@ -135,7 +135,7 @@ const renderLinkSidebar = (name, label, icon, classes) => {
 const getLinkUrl = name => {
   return name === 'buy'
     ? 'https://classic.openocean.finance/exchange/BNB'
-    : `https://${name}.beefy.finance`;
+    : `https://${name}.ballena.io`;
 };
 
 export default Header;
