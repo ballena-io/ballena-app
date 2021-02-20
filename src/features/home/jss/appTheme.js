@@ -39,7 +39,7 @@ const createTheme = isNightMode =>
       },
       text: {
         primary: isNightMode ? DARK_MODE_ACCENT_BLUE : DARK_BROWN,
-        secondary: isNightMode ? '#B0B0DD' : '#00000066',
+        secondary: isNightMode ? WHITE_BLUE : DARK_BROWN,
       },
     },
     overrides: {
