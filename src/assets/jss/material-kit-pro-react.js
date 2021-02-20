@@ -28,8 +28,9 @@ const hexToRgb = input => {
 // ##############################
 // // // Variables - Styles that are used on more than one component
 // #############################
+const DARK_BROWN = '#49BEFA';
 
-const primaryColor = ['#000000', '#B9AEA5'];
+const primaryColor = [DARK_BROWN, '#B9AEA5'];
 const hoverColor = ['#EFE6DC'];
 
 const secondaryColor = ['#FBF6F0', '#EFE6DC', '#DED9D5'];
