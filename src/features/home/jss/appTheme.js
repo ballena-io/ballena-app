@@ -38,10 +38,6 @@ const createTheme = isNightMode =>
         label: {
           color: isNightMode ? '#fff' : DARK_BROWN,
         },
-        containedPrimary: {
-          color: RED,
-          backgroundColor: DARK_BROWN,
-        },
       },
 
       // for dropdown menu items
