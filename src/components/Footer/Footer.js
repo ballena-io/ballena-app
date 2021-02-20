@@ -1,6 +1,6 @@
+import { makeStyles } from '@material-ui/core/styles';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
 
 import styles from './styles';
 
@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className={classes.root}>
       <div className={classes.column}>
-        <div className={classes.title}>beefy.finance</div>
+        <div className={classes.title}>ballena.io</div>
         <a
           href="https://docs.beefy.finance"
           target="_blank"
