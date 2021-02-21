@@ -208,6 +208,7 @@ const styles = theme => ({
     color: theme.palette.text.primary,
   },
   walletDisplay: {
+    borderRadius: '8px',
     width: '100%',
     margin: '12px 0',
     fontSize: '14px',

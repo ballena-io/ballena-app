@@ -1,5 +1,6 @@
-const styles = (theme) => ({
+const styles = theme => ({
   details: {
+    borderRadius: '8px',
     display: 'flex',
     alignItems: 'center',
     background: theme.palette.background.primary,

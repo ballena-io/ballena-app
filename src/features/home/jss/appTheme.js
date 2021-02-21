@@ -41,7 +41,22 @@ const createTheme = isNightMode =>
       },
     },
     overrides: {
+      MuiAccordion: {
+        rounded: {
+          '&:last-child': {
+            borderBottomLeftRadius: '8px',
+            borderBottomRightRadius: '8px',
+          },
+          '&:first-child': {
+            borderTopLeftRadius: '8px',
+            borderTopRightRadius: '8px',
+          },
+        },
+      },
       MuiButton: {
+        base: {
+          borderRadius: '8px',
+        },
         label: {
           color: isNightMode ? WHITE_BLUE : DARK_BLUE,
         },
