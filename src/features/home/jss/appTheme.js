@@ -17,7 +17,7 @@ const createTheme = isNightMode =>
       type: isNightMode ? 'dark' : 'light',
       background: {
         default: isNightMode ? DARK_BLUE : BRIGHT_BLUE,
-        paper: isNightMode ? '#606077' : WHITE_BLUE,
+        paper: isNightMode ? DARK_BLUE : WHITE_BLUE,
         primary: isNightMode ? DARK_MODE_MEDIUM_BLUE : WHITE_BLUE,
         secondary: isNightMode ? DARK_MODE_MEDIUM_BLUE : MEDIUM_BLUE,
         dark: isNightMode ? DARK_BLUE : DARK_BLUE,
