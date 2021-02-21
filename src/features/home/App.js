@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { ThemeProvider, StylesProvider } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
-
+import { makeStyles, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
 import Header from 'components/Header/Header';
 import HeaderLinks from 'components/HeaderLinks/HeaderLinks';
-
+import { Notifier } from 'features/common';
+import { SnackbarProvider } from 'notistack';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { SnackbarProvider } from 'notistack';
-import { Notifier } from 'features/common';
-
 import Footer from '../../components/Footer/Footer';
-import Pastures from '../../components/Pastures/Pastures';
-import appStyle from './jss/appStyle.js';
-
 import { createWeb3Modal } from '../web3';
-import { useConnectWallet, useDisconnectWallet } from './redux/hooks';
 import useNightMode from './hooks/useNightMode';
+import appStyle from './jss/appStyle.js';
 import createTheme from './jss/appTheme';
+import { useConnectWallet, useDisconnectWallet } from './redux/hooks';
 
 const useStyles = makeStyles(appStyle);
 
@@ -64,7 +58,10 @@ export default function App({ children }) {
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <SnackbarProvider>
-          <div className={classes.page} style={{ backgroundColor: theme.palette.background.default }}>
+          <div
+            className={classes.page}
+            style={{ backgroundColor: theme.palette.background.default }}
+          >
             <Header
               links={
                 <HeaderLinks
@@ -87,7 +84,7 @@ export default function App({ children }) {
             </div>
 
             <Footer />
-            <Pastures />
+            {/* <Pastures /> */}
           </div>
         </SnackbarProvider>
       </ThemeProvider>
