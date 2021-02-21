@@ -1,10 +1,4 @@
-import {
-  grayColor,
-  primaryColor,
-  whiteColor,
-  mlAuto,
-  hexToRgb,
-} from 'assets/jss/material-kit-pro-react.js';
+import { grayColor, hexToRgb, mlAuto, primaryColor, whiteColor } from 'assets/jss/material-kit-pro-react.js';
 
 const styles = theme => ({
   list: {
@@ -228,12 +222,12 @@ const styles = theme => ({
     },
   },
   icon: {
-    color: theme.palette.text.primary,
+    color: theme.palette.walletIcon.color,
     width: '24px',
     marginRight: '4px',
   },
   iconButton: {
-    color: theme.palette.text.primary,
+    color: theme.palette.walletIcon.color,
   },
 });
 

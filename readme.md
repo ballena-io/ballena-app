@@ -1,4 +1,4 @@
-# Beefy Finance (\$BIFI)
+# Ballena.io (\$BALLE)
 
 ## Overview
 

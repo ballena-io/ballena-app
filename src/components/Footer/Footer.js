@@ -1,6 +1,6 @@
+import { makeStyles } from '@material-ui/core/styles';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
 
 import styles from './styles';
 
@@ -13,9 +13,9 @@ const Footer = () => {
   return (
     <div className={classes.root}>
       <div className={classes.column}>
-        <div className={classes.title}>beefy.finance</div>
+        <div className={classes.title}>ballena.io</div>
         <a
-          href="https://docs.beefy.finance"
+          href="https://docs.ballena.io"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://medium.com/beefyfinance"
+          href="https://medium.com/@ballena"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -35,7 +35,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://github.com/beefyfinance"
+          href="https://github.com/ballena-io"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -48,7 +48,7 @@ const Footer = () => {
       <div className={classes.column}>
         <div className={classes.title}>{t('products')}</div>
         <a
-          href="https://gov.beefy.finance"
+          href="https://gov.ballena.io"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -58,7 +58,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://vote.beefy.finance"
+          href="https://vote.ballena.io"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -68,7 +68,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://app.beefy.finance"
+          href="https://app.ballena.io"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -81,7 +81,7 @@ const Footer = () => {
       <div className={classes.column}>
         <div className={classes.title}>{t('socials')}</div>
         <a
-          href="https://twitter.com/beefyfinance"
+          href=" https://twitter.com/ballenaio"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -91,7 +91,7 @@ const Footer = () => {
           <span>twitter</span>
         </a>
         <a
-          href="https://t.me/beefyfinance"
+          href="https://t.me/stgcrypto"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
@@ -101,7 +101,7 @@ const Footer = () => {
           <span>telegram</span>
         </a>
         <a
-          href="https://discord.gg/9xfMvJY"
+          href="https://discord.gg/ydRbEAaqqc"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}

@@ -1,16 +1,16 @@
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Close from '@material-ui/icons/Close';
+import Menu from '@material-ui/icons/Menu';
+import NightsStay from '@material-ui/icons/NightsStay';
+import WbSunny from '@material-ui/icons/WbSunny';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import Drawer from '@material-ui/core/Drawer';
-import Menu from '@material-ui/icons/Menu';
-import Close from '@material-ui/icons/Close';
-import WbSunny from '@material-ui/icons/WbSunny';
-import NightsStay from '@material-ui/icons/NightsStay';
 
 import styles from './styles';
 
@@ -36,7 +36,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
               height={'40px'}
               className={classes.logo}
             />
-            <a href="https://beefy.finance">beefy.finance</a>
+            <a href="https://ballena.io">ballena.io</a>
           </Hidden>
           <Hidden smUp>
             <img
@@ -135,7 +135,7 @@ const renderLinkSidebar = (name, label, icon, classes) => {
 const getLinkUrl = name => {
   return name === 'buy'
     ? 'https://classic.openocean.finance/exchange/BNB'
-    : `https://${name}.beefy.finance`;
+    : `https://${name}.ballena.io`;
 };
 
 export default Header;
