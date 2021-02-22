@@ -1,4 +1,4 @@
-import { StakePage } from './';
+// import { StakePage } from './';
 
 export default {
   path: 'stake',
