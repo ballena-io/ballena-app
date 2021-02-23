@@ -1,6 +1,6 @@
 const styles = theme => ({
   container: {
-    borderRadius: '12px',
+    borderRadius: '8px',
     padding: '8px',
     margin: '8px 0 2rem',
     border: '2px solid ' + theme.palette.background.border,

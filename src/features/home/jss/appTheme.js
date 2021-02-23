@@ -76,6 +76,17 @@ const createTheme = isNightMode =>
           color: isNightMode ? WHITE_BLUE : DARK_BLUE,
         },
       },
+      MuiMenu: {
+        list: {
+          border: `1px solid ${ACCENT_BLUE}`,
+          borderRadius: '4px',
+        },
+      },
+      MuiAutocomplete: {
+        paper: {
+          border: `1px solid ${ACCENT_BLUE}`,
+        },
+      },
     },
   });
 
