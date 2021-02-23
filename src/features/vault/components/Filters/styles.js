@@ -1,10 +1,7 @@
 const styles = theme => ({
   container: {
-    borderRadius: '8px',
     padding: '8px',
     margin: '8px 0 2rem',
-    border: '2px solid ' + theme.palette.background.border,
-    backgroundColor: theme.palette.background.primary,
     justifyContent: 'space-between',
   },
 
