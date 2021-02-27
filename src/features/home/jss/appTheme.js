@@ -11,13 +11,15 @@ const DARK_BLUE = '#1D3149';
 const DARK_MODE_MEDIUM_BLUE = '#111D2C';
 const DARK_MODE_ACCENT_BLUE = '#00B5EB';
 
+const ACCENT_BLUE_BORDER = `1px solid ${ACCENT_BLUE}`;
+
 const createTheme = isNightMode =>
   createMuiTheme({
     palette: {
       type: isNightMode ? 'dark' : 'light',
       background: {
         default: isNightMode ? DARK_BLUE : BRIGHT_BLUE,
-        paper: isNightMode ? '#606077' : WHITE_BLUE,
+        paper: isNightMode ? DARK_BLUE : WHITE_BLUE,
         primary: isNightMode ? DARK_MODE_MEDIUM_BLUE : WHITE_BLUE,
         secondary: isNightMode ? DARK_MODE_MEDIUM_BLUE : MEDIUM_BLUE,
         dark: isNightMode ? DARK_BLUE : DARK_BLUE,
@@ -25,6 +27,7 @@ const createTheme = isNightMode =>
         retired: isNightMode ? '#d32f2f' : '#e57373',
         hover: isNightMode ? DARK_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
+        containedButtonHover: isNightMode ? ACCENT_BLUE : DARK_BLUE,
       },
       walletIcon: {
         color: isNightMode ? WHITE_BLUE : DARK_BLUE,
@@ -41,7 +44,22 @@ const createTheme = isNightMode =>
       },
     },
     overrides: {
+      MuiAccordion: {
+        rounded: {
+          '&:last-child': {
+            borderBottomLeftRadius: '8px',
+            borderBottomRightRadius: '8px',
+          },
+          '&:first-child': {
+            borderTopLeftRadius: '8px',
+            borderTopRightRadius: '8px',
+          },
+        },
+      },
       MuiButton: {
+        base: {
+          borderRadius: '8px',
+        },
         label: {
           color: isNightMode ? WHITE_BLUE : DARK_BLUE,
         },
@@ -59,6 +77,22 @@ const createTheme = isNightMode =>
         },
         colorSecondary: {
           color: isNightMode ? WHITE_BLUE : DARK_BLUE,
+        },
+      },
+      MuiMenu: {
+        list: {
+          border: ACCENT_BLUE_BORDER,
+          borderRadius: '4px',
+        },
+      },
+      MuiAutocomplete: {
+        paper: {
+          border: ACCENT_BLUE_BORDER,
+        },
+      },
+      MuiDialog: {
+        paper: {
+          border: `2px solid ${ACCENT_BLUE}`,
         },
       },
     },
