@@ -1,13 +1,13 @@
+import React, { useState, useCallback, memo } from 'react';
 import Accordion from '@material-ui/core/Accordion';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import BigNumber from 'bignumber.js';
-import { byDecimals } from 'features/helpers/bignumber';
-import React, { memo, useCallback, useState } from 'react';
 
-import PoolDetails from '../PoolDetails/PoolDetails';
+import { byDecimals } from 'features/helpers/bignumber';
 import PoolSummary from '../PoolSummary/PoolSummary';
+import PoolDetails from '../PoolDetails/PoolDetails';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
@@ -26,7 +26,7 @@ const Pool = ({ pool, index, tokens, apy }) => {
       <Accordion
         expanded={isOpen}
         className={classes.accordion}
-        square={false}
+        square={true}
         TransitionProps={{ unmountOnExit: true }}
       >
         <PoolSummary
