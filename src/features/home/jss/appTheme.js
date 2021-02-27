@@ -11,6 +11,8 @@ const DARK_BLUE = '#1D3149';
 const DARK_MODE_MEDIUM_BLUE = '#111D2C';
 const DARK_MODE_ACCENT_BLUE = '#00B5EB';
 
+const ACCENT_BLUE_BORDER = `1px solid ${ACCENT_BLUE}`;
+
 const createTheme = isNightMode =>
   createMuiTheme({
     palette: {
@@ -25,6 +27,7 @@ const createTheme = isNightMode =>
         retired: isNightMode ? '#d32f2f' : '#e57373',
         hover: isNightMode ? DARK_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
+        containedButtonHover: isNightMode ? ACCENT_BLUE : DARK_BLUE,
       },
       walletIcon: {
         color: isNightMode ? WHITE_BLUE : DARK_BLUE,
@@ -78,13 +81,18 @@ const createTheme = isNightMode =>
       },
       MuiMenu: {
         list: {
-          border: `1px solid ${ACCENT_BLUE}`,
+          border: ACCENT_BLUE_BORDER,
           borderRadius: '4px',
         },
       },
       MuiAutocomplete: {
         paper: {
-          border: `1px solid ${ACCENT_BLUE}`,
+          border: ACCENT_BLUE_BORDER,
+        },
+      },
+      MuiDialog: {
+        paper: {
+          border: `2px solid ${ACCENT_BLUE}`,
         },
       },
     },
