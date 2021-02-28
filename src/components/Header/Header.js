@@ -53,14 +53,14 @@ const Header = ({ links, isNightMode, setNightMode }) => {
         </Button>
 
         <span>
-          {renderLink('barn', 'barn', 'warehouse', classes)}
+          {renderLink('Barn', 'barn', undefined, classes)}
           <Hidden xsDown>
-            {renderLink('vote', 'vote', 'vote-yea', classes)}
-            {renderLink('gov', 'gov', 'landmark', classes)}
-            {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
-            {renderLink('docs', 'docs', 'book', classes)}
+            {renderLink('Vote', 'vote', undefined, classes)}
+            {renderLink('Gov', 'gov', undefined, classes)}
+            {renderLink('Dashboard', t('stats'), undefined, classes)}
+            {renderLink('Docs', 'docs', undefined, classes)}
           </Hidden>
-          {renderLink('buy', t('buy'), 'dollar-sign', classes)}
+          {renderLink('Buy', t('buy'), undefined, classes)}
         </span>
 
         <Hidden smDown implementation="css">
@@ -97,12 +97,12 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           </IconButton>
           <div className={classes.appResponsive}>{links}</div>
           <div style={{ textAlign: 'center' }}>
-            {renderLinkSidebar('gov', 'gov', 'landmark', classes)}
-            {renderLinkSidebar('barn', 'barn', 'warehouse', classes)}
-            {renderLinkSidebar('vote', 'vote', 'vote-yea', classes)}
-            {renderLinkSidebar('dashboard', t('stats'), 'chart-bar', classes)}
-            {renderLinkSidebar('docs', 'docs', 'book', classes)}
-            {renderLinkSidebar('buy', t('buy'), 'dollar-sign', classes)}
+            {renderLinkSidebar('Gov', 'gov', undefined, classes)}
+            {renderLinkSidebar('Barn', 'barn', undefined, classes)}
+            {renderLinkSidebar('Vote', 'vote', undefined, classes)}
+            {renderLinkSidebar('Dashboard', t('stats'), undefined, classes)}
+            {renderLinkSidebar('Docs', 'docs', undefined, classes)}
+            {renderLinkSidebar('Buy', t('buy'), undefined, classes)}
             <IconButton onClick={setNightMode} className={classes.icon}>
               {isNightMode ? <WbSunny /> : <NightsStay />}
             </IconButton>
@@ -115,15 +115,9 @@ const Header = ({ links, isNightMode, setNightMode }) => {
 
 const renderLink = (name, label, icon, classes) => {
   return (
-    <a
-      href={getLinkUrl(name)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={classes.link}
-      style={{ marginLeft: '5px', marginRight: '5px' }}
-    >
-      <i className={`fas fa-${icon} ${classes.icon}`} />
-      <span>{label}</span>
+    <a href={getLinkUrl(name)} target="_blank" rel="noopener noreferrer" className={classes.link}>
+      {icon && <i className={`fas fa-${icon} ${classes.icon}`} />}
+      <span className={classes.link}>{name}</span>
     </a>
   );
 };

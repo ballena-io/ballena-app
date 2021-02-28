@@ -222,13 +222,11 @@ const styles = theme => ({
     marginRight: '6px',
   },
   link: {
-    margin: '0 1rem',
-    fontSize: '1rem',
-    fontWeight: 400,
-    color: '#000',
+    margin: '0 4px',
+    fontSize: '18px',
     textDecoration: 'none',
     '&:hover': {
-      textDecoration: 'underline',
+      color: '#ffffff',
     },
     '& span': {
       color: theme.palette.text.primary,
@@ -236,7 +234,6 @@ const styles = theme => ({
   },
   icon: {
     color: theme.palette.text.primary,
-    // marginRight: '0.5rem',
     minWidth: '24px',
     textAlign: 'end',
   },
