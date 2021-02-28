@@ -30,19 +30,23 @@ const Header = ({ links, isNightMode, setNightMode }) => {
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Hidden xsDown>
-            <img
-              alt="BIFI"
-              src={require(`images/BIFI.svg`)}
-              height={'40px'}
-              className={classes.logo}
-            />
-            <a href="https://ballena.io">ballena.io</a>
+            <div className={classes.logoContainer}>
+              <img
+                alt="BALLE"
+                src={require(`images/logos/logo_balle_web.png`)}
+                height={'60px'}
+                className={classes.logo}
+              />
+              <div>
+                <a href="https://ballena.io">ballena.io</a>
+              </div>
+            </div>
           </Hidden>
           <Hidden smUp>
             <img
               alt="BIFI"
-              src={require(`images/BIFI.svg`)}
-              height={'35px'}
+              src={require(`images/logos/logo_balle_web.png`)}
+              height={'45px'}
               className={classes.logo}
             />
           </Hidden>
