@@ -13,7 +13,7 @@
   "Vault-DepositButton": "Depositar",
   "Vault-DepositButtonAll": "Depositar Todo",
   "Vault-Deposited": "Depositado",
-  "Vault-DepositFee": "Hay una tarifa de depósito de <0.1%, sin tarifa de retiro",
+  "Vault-DepositFee": "Tarifa de depósito de <0.1%. Sin tarifa de retiro",
   "Vault-DepositSuccess": "Depositado con éxito",
   "Vault-DepositError": "Error al depositar: {{error}}",
   "Vault-DepositsPausedTitle": "Depósitos suspendidos",
