@@ -6,11 +6,11 @@ import styles from './styles';
 
 const useStyles = makeStyles(styles);
 
-const LabeledStat = ({ value, label, xs, md }) => {
+const LabeledStat = ({ center, value, label }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div className={center ? classes.centerContainer : classes.container}>
       <Typography className={classes.label} variant="body2">
         {label}
       </Typography>

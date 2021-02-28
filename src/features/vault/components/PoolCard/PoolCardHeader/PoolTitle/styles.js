@@ -2,8 +2,6 @@ const styles = theme => ({
   container: {
     alignItems: 'center',
     display: 'flex',
-    borderBottom: `1px solid ${theme.palette.primary.main}`,
-    padding: '0 12px 12px 8px',
     width: '100%',
   },
   texts: {
@@ -24,10 +22,6 @@ const styles = theme => ({
     color: theme.palette.text.primary.main,
     lineHeight: '14px',
     letterSpacing: 0,
-  },
-  icon: {
-    color: theme.palette.text.primary,
-    marginLeft: '4px',
   },
   image: {
     maxWidth: '60px',

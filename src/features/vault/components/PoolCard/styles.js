@@ -1,9 +1,10 @@
 const styles = theme => ({
   container: {
+    background: theme.palette.background.primary,
     border: '1px solid ' + theme.palette.background.border,
     borderRadius: '8px',
-    margin: '0 16px 16px 0',
-    maxWidth: 300,
+    margin: '8px',
+    width: 300,
   },
   expand: {
     transform: 'rotate(0deg)',

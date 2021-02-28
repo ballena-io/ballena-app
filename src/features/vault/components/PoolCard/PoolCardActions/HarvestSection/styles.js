@@ -19,8 +19,8 @@ const styles = theme => ({
     },
   },
   showDetailButton: {
-    fontWeight: 'bold',
     borderRadius: '4px',
+    fontSize: '12px',
   },
   showDetailButtonOutlined: {
     backgroundColor: 'transparent',
@@ -41,6 +41,7 @@ const styles = theme => ({
     '& .MuiButton-label': {
       color: 'white',
     },
+    fontWeight: 'bold',
   },
   title: {
     fontSize: '18px',
