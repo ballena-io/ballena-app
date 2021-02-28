@@ -29,7 +29,7 @@
   "Vault-SecondTitle": "Deposita y genera ganancias",
   "Vault-LastHarvest": "Última Cosecha",
   "Vault-Harvesting": "Cosechando...",
-  "Vault-HarvestButton": "Cosecha",
+  "Vault-HarvestButton": "Cosechar",
   "Vault-HarvestConfirm": "Confirmar Cosecha?",
   "Vault-HarvestDescription": "Al cosechar, estás ayudando a todos a recolectar las ganancias generadas en esta bóveda. Usted recibirá {{callFee}}% de las ganancias de la bóveda desde la última cosecha.",
   "Vault-HarvestSuccess": "Cosechado con éxito",
