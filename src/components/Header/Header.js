@@ -33,8 +33,8 @@ const Header = ({ links, isNightMode, setNightMode }) => {
             <div className={classes.logoContainer}>
               <img
                 alt="BALLE"
-                src={require(`images/logos/logo_balle_web.png`)}
-                height={'60px'}
+                src={require(`images/logos/logo_balle_160x.png`)}
+                height={'65px'}
                 className={classes.logo}
               />
               <div>
@@ -45,7 +45,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           <Hidden smUp>
             <img
               alt="BIFI"
-              src={require(`images/logos/logo_balle_web.png`)}
+              src={require(`images/logos/logo_balle_160x.png`)}
               height={'45px'}
               className={classes.logo}
             />
