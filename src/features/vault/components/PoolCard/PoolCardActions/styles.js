@@ -7,7 +7,7 @@ const styles = theme => ({
   },
   buttonsContainer: {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     '& + &': {
       marginLeft: '5px',
@@ -19,8 +19,11 @@ const styles = theme => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
+  footer: {
+    backgroundColor: theme.palette.background.default,
+    width: '100%',
+  },
   showDetailButton: {
-    fontWeight: 'bold',
     borderRadius: '4px',
   },
   showDetailButtonContained: {
@@ -31,11 +34,15 @@ const styles = theme => ({
         color: theme.palette.background.hover,
       },
     },
+    fontWeight: 'bold',
+    marginRight: '12px',
+    height: ' 42px',
   },
   showDetailButtonOutlined: {
     backgroundColor: 'transparent',
     border: `1px solid ${theme.palette.primary.main}`,
     color: primaryColor[0],
+    fontSize: '12px',
     '&:hover': {
       backgroundColor: theme.palette.background.hover,
       '& .MuiButton-label': {
@@ -45,6 +52,12 @@ const styles = theme => ({
     '& .MuiTouchRipple-root span': {
       backgroundColor: primaryColor[0],
     },
+  },
+  statsActionsRow: {
+    display: 'flex',
+    paddingBottom: '12px',
+    justifyContent: 'start',
+    alignItems: 'center',
   },
 });
 

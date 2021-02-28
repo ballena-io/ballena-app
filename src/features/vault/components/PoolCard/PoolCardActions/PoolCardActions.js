@@ -5,10 +5,14 @@ import IconButton from '@material-ui/core/IconButton';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
+import BigNumber from 'bignumber.js';
+import { byDecimals } from 'features/helpers/bignumber';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { shouldHideFromHarvest } from '../../../../helpers/utils';
+import { formatDecimals } from '../helpers';
+import LabeledStat from '../LabeledStat/LabeledStat';
 import DepositSection from './DepositSection/DepositSection';
 import HarvestSection from './HarvestSection/HarvestSection';
 import styles from './styles';
@@ -51,15 +55,31 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   };
 
   return (
-    <>
+    <div className={classes.footer}>
+      <div className={classes.statsActionsRow}>
+        <div>
+          <Button
+            className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
+            onClick={handleDepositSectionOpen}
+          >
+            {t('Vault-DepositButton')}
+          </Button>
+        </div>
+        <div>
+          <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
+          <LabeledStat
+            value={formatDecimals(
+              byDecimals(
+                sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
+                pool.tokenDecimals
+              )
+            )}
+            label={t('Vault-Deposited')}
+            align="start"
+          />
+        </div>
+      </div>
       <div className={classes.buttonsContainer}>
-        <Button
-          className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
-          onClick={handleDepositSectionOpen}
-        >
-          {t('Vault-DepositButton')}
-        </Button>
-
         <Button
           className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
           onClick={handleWithdrawSectionOpen}
@@ -84,7 +104,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
         </DialogTitle>
         <WithdrawSection index={index} pool={pool} sharesBalance={sharesBalance} />
       </Dialog>
-    </>
+    </div>
   );
 };
 

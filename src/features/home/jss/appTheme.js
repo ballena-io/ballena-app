@@ -28,6 +28,7 @@ const createTheme = isNightMode =>
         hover: isNightMode ? DARK_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
         containedButtonHover: isNightMode ? ACCENT_BLUE : DARK_BLUE,
+        cardFooter: isNightMode ? DARK_BLUE : MEDIUM_BLUE,
       },
       walletIcon: {
         color: isNightMode ? WHITE_BLUE : DARK_BLUE,
@@ -93,6 +94,13 @@ const createTheme = isNightMode =>
       MuiDialog: {
         paper: {
           border: `2px solid ${ACCENT_BLUE}`,
+        },
+      },
+      MuiCardActions: {
+        root: {
+          backgroundColor: isNightMode ? DARK_BLUE : BRIGHT_BLUE,
+          borderTop: ACCENT_BLUE_BORDER,
+          padding: '16px',
         },
       },
     },

@@ -1,11 +1,9 @@
 const styles = theme => ({
-  dataContainer: {
+  container: {
+    padding: '16px',
     display: 'flex',
+    alignItems: 'center',
     width: '100%',
-    justifyContent: 'space-between',
-    borderBottom: `1px solid ${theme.palette.primary.main}`,
-    padding: '0 0 12px 8px',
-    minHeight: '72px',
   },
   details: {
     background: theme.palette.background.primary,
@@ -15,6 +13,15 @@ const styles = theme => ({
   },
   detailsRetired: {
     background: theme.palette.background.retired,
+  },
+  statsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+  },
+  statsRow: {
+    display: 'flex',
+    paddingBottom: '12px',
   },
 });
 
