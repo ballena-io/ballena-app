@@ -1,4 +1,9 @@
 const styles = theme => ({
+  listContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
   subtitle: {
     fontSize: '20px',
     letterSpacing: '0',

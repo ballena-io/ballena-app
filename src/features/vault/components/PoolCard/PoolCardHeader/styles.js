@@ -1,19 +1,28 @@
 const styles = theme => ({
-  details: {
-    borderRadius: '8px',
+  container: {
+    padding: '16px',
     display: 'flex',
     alignItems: 'center',
+    width: '100%',
+  },
+  details: {
     background: theme.palette.background.primary,
   },
   detailsPaused: {
-    display: 'flex',
-    alignItems: 'center',
     background: theme.palette.background.paused,
   },
   detailsRetired: {
-    display: 'flex',
-    alignItems: 'center',
     background: theme.palette.background.retired,
+  },
+  statsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '0 16px 0 16px',
+    width: '100%',
+  },
+  statsRow: {
+    display: 'flex',
+    paddingTop: '24px',
   },
 });
 
