@@ -1,17 +1,17 @@
 import {
-  container,
-  primaryColor,
-  infoColor,
-  successColor,
-  warningColor,
-  dangerColor,
-  roseColor,
-  transition,
-  boxShadow,
   blackColor,
-  whiteColor,
+  boxShadow,
+  container,
+  dangerColor,
   grayColor,
   hexToRgb,
+  infoColor,
+  primaryColor,
+  roseColor,
+  successColor,
+  transition,
+  warningColor,
+  whiteColor,
 } from 'assets/jss/material-kit-pro-react.js';
 
 const styles = theme => ({
@@ -219,7 +219,7 @@ const styles = theme => ({
     overflow: 'visible',
   },
   logo: {
-    marginRight: '12px',
+    marginRight: '6px',
   },
   link: {
     margin: '0 1rem',
@@ -236,12 +236,16 @@ const styles = theme => ({
   },
   icon: {
     color: theme.palette.text.primary,
-    marginRight: '0.5rem',
+    // marginRight: '0.5rem',
     minWidth: '24px',
     textAlign: 'end',
   },
   iconButton: {
     color: theme.palette.text.primary,
+  },
+  logoContainer: {
+    display: 'flex',
+    alignItems: 'center',
   },
 });
 

@@ -1,18 +1,18 @@
-import React from 'react';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import { makeStyles } from '@material-ui/core/styles';
-import { useTranslation } from 'react-i18next';
-import Grid from '@material-ui/core/Grid';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
 import Checkbox from '@material-ui/core/Checkbox';
-import InputLabel from '@material-ui/core/InputLabel';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles';
-import { platforms, assets } from './constants';
+
+// import Select from '@material-ui/core/Select';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import InputLabel from '@material-ui/core/InputLabel';
+// import Autocomplete from '@material-ui/lab/Autocomplete';
+// import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles(styles);
 
@@ -31,21 +31,21 @@ const Filters = ({
   const { t } = useTranslation();
   const classes = useStyles();
 
-  const handlePlatformChange = event => setPlatform(event.target.value);
-  const handleVaultTypeChange = event => setVaultType(event.target.value);
-  const handleAssetChange = (_event, option) => setAsset(option.value);
-  const handleOrderChange = event => setOrder(event.target.value);
+  // const handlePlatformChange = event => setPlatform(event.target.value);
+  // const handleVaultTypeChange = event => setVaultType(event.target.value);
+  // const handleAssetChange = (_event, option) => setAsset(option.value);
+  // const handleOrderChange = event => setOrder(event.target.value);
 
-  const options = [
-    {
-      value: 'All',
-      label: t('Filters-All')
-    },
-    ...assets.map(asset => ({
-      value: asset,
-      label: asset
-    }))
-  ];
+  // const options = [
+  //   {
+  //     value: 'All',
+  //     label: t('Filters-All')
+  //   },
+  //   ...assets.map(asset => ({
+  //     value: asset,
+  //     label: asset
+  //   }))
+  // ];
 
   return (
     <Grid container spacing={2} className={classes.container}>
@@ -100,7 +100,7 @@ const Filters = ({
         </FormControl>
       </Grid>
 
-      <Grid item xs={6} md={3}>
+      {/* <Grid item xs={6} md={3}>
         <FormControl className={classes.selectorContainer}>
           <InputLabel id="select-platform-label" className={classes.selectorLabel}>
             {t('Filters-Platform')}
@@ -192,7 +192,7 @@ const Filters = ({
             <MenuItem value={'tvl'}>TVL</MenuItem>
           </Select>
         </FormControl>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
