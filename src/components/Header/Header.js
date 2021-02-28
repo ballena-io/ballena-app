@@ -53,12 +53,12 @@ const Header = ({ links, isNightMode, setNightMode }) => {
         </Button>
 
         <span>
-          {renderLink('Barn', 'barn', undefined, classes)}
+          {/* {renderLink('Barn', 'barn', undefined, classes)} */}
+          {renderLink('Docs', 'docs', undefined, classes)}
           <Hidden xsDown>
-            {renderLink('Vote', 'vote', undefined, classes)}
-            {renderLink('Gov', 'gov', undefined, classes)}
+            {/* {renderLink('Vote', 'vote', undefined, classes)} */}
+            {/* {renderLink('Gov', 'gov', undefined, classes)} */}
             {renderLink('Dashboard', t('stats'), undefined, classes)}
-            {renderLink('Docs', 'docs', undefined, classes)}
           </Hidden>
           {renderLink('Buy', t('buy'), undefined, classes)}
         </span>
@@ -97,9 +97,9 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           </IconButton>
           <div className={classes.appResponsive}>{links}</div>
           <div style={{ textAlign: 'center' }}>
-            {renderLinkSidebar('Gov', 'gov', undefined, classes)}
-            {renderLinkSidebar('Barn', 'barn', undefined, classes)}
-            {renderLinkSidebar('Vote', 'vote', undefined, classes)}
+            {/* {renderLinkSidebar('Gov', 'gov', undefined, classes)} */}
+            {/* {renderLinkSidebar('Barn', 'barn', undefined, classes)} */}
+            {/* {renderLinkSidebar('Vote', 'vote', undefined, classes)} */}
             {renderLinkSidebar('Dashboard', t('stats'), undefined, classes)}
             {renderLinkSidebar('Docs', 'docs', undefined, classes)}
             {renderLinkSidebar('Buy', t('buy'), undefined, classes)}
@@ -131,9 +131,7 @@ const renderLinkSidebar = (name, label, icon, classes) => {
 };
 
 const getLinkUrl = name => {
-  return name === 'buy'
-    ? 'https://classic.openocean.finance/exchange/BNB'
-    : `https://${name}.ballena.io`;
+  return name === 'buy' ? 'https://openocean.finance/classic' : `https://${name}.ballena.io`;
 };
 
 export default Header;
