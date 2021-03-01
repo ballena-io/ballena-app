@@ -1,8 +1,10 @@
 const styles = theme => ({
   container: {
-    padding: '8px',
-    margin: '8px 0 2rem',
-    justifyContent: 'space-between',
+    display: 'flex',
+    padding: '8px 4px',
+    margin: '8px 0 8px',
+    justifyContent: 'center',
+    width: '100%',
   },
 
   selectorContainer: {
