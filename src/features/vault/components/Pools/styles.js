@@ -21,11 +21,12 @@ const styles = theme => ({
   subtitles: {
     display: 'flex',
     justifyContent: 'space-between',
+    [theme.breakpoints.down('xs')]: {
+      display: 'block',
+    },
   },
   subtitle: {
     fontSize: '14px',
-    letterSpacing: '0',
-    lineHeight: '8px',
     [theme.breakpoints.down('xs')]: {
       lineHeight: '16px',
     },
