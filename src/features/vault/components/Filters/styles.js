@@ -5,6 +5,7 @@ const styles = theme => ({
     margin: '8px 0 8px',
     justifyContent: 'center',
     width: '100%',
+    flexWrap: 'wrap',
   },
 
   selectorContainer: {
@@ -23,6 +24,7 @@ const styles = theme => ({
 
   label: {
     color: theme.palette.text.primary,
+    minWidth: '100px',
   },
 });
 
