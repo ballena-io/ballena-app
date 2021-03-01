@@ -58,9 +58,6 @@ const createTheme = isNightMode =>
         },
       },
       MuiButton: {
-        base: {
-          borderRadius: '8px',
-        },
         label: {
           color: isNightMode ? WHITE_BLUE : DARK_BLUE,
         },

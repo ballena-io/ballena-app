@@ -25,6 +25,8 @@ const Header = ({ links, isNightMode, setNightMode }) => {
     setMobileOpen(!mobileOpen);
   };
 
+  console.log(links);
+
   return (
     <AppBar className={`${classes.appBar} ${classes.dark}`}>
       <Toolbar className={classes.container}>
@@ -33,8 +35,8 @@ const Header = ({ links, isNightMode, setNightMode }) => {
             <div className={classes.logoContainer}>
               <img
                 alt="BALLE"
-                src={require(`images/logos/logo_balle_web.png`)}
-                height={'60px'}
+                src={require(`images/logos/logo_balle_header_160px.png`)}
+                height={'65px'}
                 className={classes.logo}
               />
               <div>
@@ -44,8 +46,8 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           </Hidden>
           <Hidden smUp>
             <img
-              alt="BIFI"
-              src={require(`images/logos/logo_balle_web.png`)}
+              alt="BALLE"
+              src={require(`images/logos/logo_balle_header_160px.png`)}
               height={'45px'}
               className={classes.logo}
             />
@@ -53,14 +55,14 @@ const Header = ({ links, isNightMode, setNightMode }) => {
         </Button>
 
         <span>
-          {renderLink('barn', 'barn', 'warehouse', classes)}
+          {/* {renderLink('Barn', 'barn', undefined, classes)} */}
+          {renderLink('docs', 'Docs', undefined, classes)}
           <Hidden xsDown>
-            {renderLink('vote', 'vote', 'vote-yea', classes)}
-            {renderLink('gov', 'gov', 'landmark', classes)}
-            {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
-            {renderLink('docs', 'docs', 'book', classes)}
+            {/* {renderLink('Vote', 'vote', undefined, classes)} */}
+            {/* {renderLink('Gov', 'gov', undefined, classes)} */}
+            {renderLink('dashboard', t('stats'), undefined, classes)}
           </Hidden>
-          {renderLink('buy', t('buy'), 'dollar-sign', classes)}
+          {renderLink('buy', t('buy'), undefined, classes)}
         </span>
 
         <Hidden smDown implementation="css">
@@ -95,14 +97,14 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           >
             <Close />
           </IconButton>
-          <div className={classes.appResponsive}>{links}</div>
-          <div style={{ textAlign: 'center' }}>
-            {renderLinkSidebar('gov', 'gov', 'landmark', classes)}
-            {renderLinkSidebar('barn', 'barn', 'warehouse', classes)}
-            {renderLinkSidebar('vote', 'vote', 'vote-yea', classes)}
-            {renderLinkSidebar('dashboard', t('stats'), 'chart-bar', classes)}
-            {renderLinkSidebar('docs', 'docs', 'book', classes)}
-            {renderLinkSidebar('buy', t('buy'), 'dollar-sign', classes)}
+          <div className={classes.sideMenuContainer}>
+            <div className={classes.appResponsive}>{links}</div>
+            {/* {renderLinkSidebar('Gov', 'gov', undefined, classes)} */}
+            {/* {renderLinkSidebar('Barn', 'barn', undefined, classes)} */}
+            {/* {renderLinkSidebar('Vote', 'vote', undefined, classes)} */}
+            {renderLinkSidebar('dashboard', t('stats'), undefined, classes)}
+            {renderLinkSidebar('docs', 'Docs', undefined, classes)}
+            {renderLinkSidebar('buy', t('buy'), undefined, classes)}
             <IconButton onClick={setNightMode} className={classes.icon}>
               {isNightMode ? <WbSunny /> : <NightsStay />}
             </IconButton>
@@ -115,31 +117,19 @@ const Header = ({ links, isNightMode, setNightMode }) => {
 
 const renderLink = (name, label, icon, classes) => {
   return (
-    <a
-      href={getLinkUrl(name)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={classes.link}
-      style={{ marginLeft: '5px', marginRight: '5px' }}
-    >
-      <i className={`fas fa-${icon} ${classes.icon}`} />
-      <span>{label}</span>
+    <a href={getLinkUrl(name)} target="_blank" rel="noopener noreferrer" className={classes.link}>
+      {icon && <i className={`fas fa-${icon} ${classes.icon}`} />}
+      <span className={classes.link}>{label}</span>
     </a>
   );
 };
 
 const renderLinkSidebar = (name, label, icon, classes) => {
-  return (
-    <div style={{ width: '100%', paddingTop: '10px' }}>
-      {renderLink(name, label, icon, classes)}
-    </div>
-  );
+  return <div className={classes.linkSidebar}>{renderLink(name, label, icon, classes)}</div>;
 };
 
 const getLinkUrl = name => {
-  return name === 'buy'
-    ? 'https://classic.openocean.finance/exchange/BNB'
-    : `https://${name}.ballena.io`;
+  return name === 'buy' ? 'https://openocean.finance/classic' : `https://${name}.ballena.io`;
 };
 
 export default Header;

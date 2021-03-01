@@ -81,8 +81,7 @@ const styles = theme => ({
     },
   },
   appResponsive: {
-    margin: '20px 10px',
-    marginTop: '0px',
+    margin: '24px 10px',
   },
   primary: {
     backgroundColor: primaryColor[0],
@@ -222,13 +221,11 @@ const styles = theme => ({
     marginRight: '6px',
   },
   link: {
-    margin: '0 1rem',
-    fontSize: '1rem',
-    fontWeight: 400,
-    color: '#000',
+    margin: '0 4px',
+    fontSize: '18px',
     textDecoration: 'none',
     '&:hover': {
-      textDecoration: 'underline',
+      color: '#ffffff',
     },
     '& span': {
       color: theme.palette.text.primary,
@@ -236,7 +233,6 @@ const styles = theme => ({
   },
   icon: {
     color: theme.palette.text.primary,
-    // marginRight: '0.5rem',
     minWidth: '24px',
     textAlign: 'end',
   },
@@ -246,6 +242,13 @@ const styles = theme => ({
   logoContainer: {
     display: 'flex',
     alignItems: 'center',
+  },
+  linkSidebar: {
+    width: '100%',
+    margin: '16px 0',
+  },
+  sideMenuContainer: {
+    textAlign: 'center',
   },
 });
 

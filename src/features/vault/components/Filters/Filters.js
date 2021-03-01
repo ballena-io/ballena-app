@@ -1,8 +1,7 @@
-import Checkbox from '@material-ui/core/Checkbox';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Switch from '@material-ui/core/Switch';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -48,57 +47,54 @@ const Filters = ({
   // ];
 
   return (
-    <Grid container spacing={2} className={classes.container}>
-      <Grid item xs={4}>
-        <FormControl>
-          <FormControlLabel
-            className={classes.label}
-            control={
-              <Checkbox
-                checked={filters.hideZeroBalances}
-                onChange={() => toggleFilter('hideZeroBalances')}
-                color="primary"
-              />
-            }
-            // TODO: translate labels
-            label={t('Hide-Zero-Balances')}
-          />
-        </FormControl>
-      </Grid>
+    <div className={classes.container}>
+      <FormControl>
+        <FormControlLabel
+          className={classes.label}
+          control={
+            <Switch
+              checked={filters.hideZeroBalances}
+              onChange={() => toggleFilter('hideZeroBalances')}
+              name="hideZeroBalances"
+              color="primary"
+            />
+          }
+          // TODO: translate labels
+          label={t('Hide-Zero-Balances')}
+        />
+      </FormControl>
 
-      <Grid item xs={4}>
-        <FormControl>
-          <FormControlLabel
-            className={classes.label}
-            control={
-              <Checkbox
-                checked={!filters.hideDecomissioned}
-                onChange={() => toggleFilter('hideDecomissioned')}
-                color="primary"
-              />
-            }
-            // TODO: translate labels
-            label={t('Retired-Vaults')}
-          />
-        </FormControl>
-      </Grid>
+      <FormControl>
+        <FormControlLabel
+          className={classes.label}
+          control={
+            <Switch
+              checked={!filters.hideDecomissioned}
+              onChange={() => toggleFilter('hideDecomissioned')}
+              name="hideDecomissioned"
+              color="primary"
+            />
+          }
+          // TODO: translate labels
+          label={t('Retired-Vaults')}
+        />
+      </FormControl>
 
-      <Grid item xs={4}>
-        <FormControl>
-          <FormControlLabel
-            className={classes.label}
-            control={
-              <Checkbox
-                checked={filters.hideZeroVaultBalances}
-                onChange={() => toggleFilter('hideZeroVaultBalances')}
-                color="primary"
-              />
-            }
-            // TODO: translate labels
-            label={t('Hide-Zero-Vault-Balances')}
-          />
-        </FormControl>
-      </Grid>
+      <FormControl>
+        <FormControlLabel
+          className={classes.label}
+          control={
+            <Switch
+              checked={filters.hideZeroVaultBalances}
+              onChange={() => toggleFilter('hideZeroVaultBalances')}
+              name="hideZeroVaultBalances"
+              color="primary"
+            />
+          }
+          // TODO: translate labels
+          label={t('Hide-Zero-Vault-Balances')}
+        />
+      </FormControl>
 
       {/* <Grid item xs={6} md={3}>
         <FormControl className={classes.selectorContainer}>
@@ -193,7 +189,7 @@ const Filters = ({
           </Select>
         </FormControl>
       </Grid> */}
-    </Grid>
+    </div>
   );
 };
 

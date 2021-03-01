@@ -45,7 +45,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className={classes.column}>
+      {/* <div className={classes.column}>
         <div className={classes.title}>{t('products')}</div>
         <a
           href="https://gov.ballena.io"
@@ -76,7 +76,7 @@ const Footer = () => {
           <i className={`fas fa-hand-holding-usd ${classes.linkIcon}`}></i>
           <span>app</span>
         </a>
-      </div>
+      </div> */}
 
       <div className={classes.column}>
         <div className={classes.title}>{t('socials')}</div>
