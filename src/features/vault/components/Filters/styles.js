@@ -6,6 +6,10 @@ const styles = theme => ({
     justifyContent: 'center',
     width: '100%',
     flexWrap: 'wrap',
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'start',
+      paddingLeft: '24px',
+    },
   },
 
   selectorContainer: {

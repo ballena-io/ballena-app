@@ -48,59 +48,53 @@ const Filters = ({
 
   return (
     <div className={classes.container}>
-      <div>
-        <FormControl>
-          <FormControlLabel
-            className={classes.label}
-            control={
-              <Switch
-                checked={filters.hideZeroBalances}
-                onChange={() => toggleFilter('hideZeroBalances')}
-                name="hideZeroBalances"
-                color="primary"
-              />
-            }
-            // TODO: translate labels
-            label={t('Hide-Zero-Balances')}
-          />
-        </FormControl>
-      </div>
+      <FormControl>
+        <FormControlLabel
+          className={classes.label}
+          control={
+            <Switch
+              checked={filters.hideZeroBalances}
+              onChange={() => toggleFilter('hideZeroBalances')}
+              name="hideZeroBalances"
+              color="primary"
+            />
+          }
+          // TODO: translate labels
+          label={t('Hide-Zero-Balances')}
+        />
+      </FormControl>
 
-      <div>
-        <FormControl>
-          <FormControlLabel
-            className={classes.label}
-            control={
-              <Switch
-                checked={!filters.hideDecomissioned}
-                onChange={() => toggleFilter('hideDecomissioned')}
-                name="hideDecomissioned"
-                color="primary"
-              />
-            }
-            // TODO: translate labels
-            label={t('Retired-Vaults')}
-          />
-        </FormControl>
-      </div>
+      <FormControl>
+        <FormControlLabel
+          className={classes.label}
+          control={
+            <Switch
+              checked={!filters.hideDecomissioned}
+              onChange={() => toggleFilter('hideDecomissioned')}
+              name="hideDecomissioned"
+              color="primary"
+            />
+          }
+          // TODO: translate labels
+          label={t('Retired-Vaults')}
+        />
+      </FormControl>
 
-      <div>
-        <FormControl>
-          <FormControlLabel
-            className={classes.label}
-            control={
-              <Switch
-                checked={filters.hideZeroVaultBalances}
-                onChange={() => toggleFilter('hideZeroVaultBalances')}
-                name="hideZeroVaultBalances"
-                color="primary"
-              />
-            }
-            // TODO: translate labels
-            label={t('Hide-Zero-Vault-Balances')}
-          />
-        </FormControl>
-      </div>
+      <FormControl>
+        <FormControlLabel
+          className={classes.label}
+          control={
+            <Switch
+              checked={filters.hideZeroVaultBalances}
+              onChange={() => toggleFilter('hideZeroVaultBalances')}
+              name="hideZeroVaultBalances"
+              color="primary"
+            />
+          }
+          // TODO: translate labels
+          label={t('Hide-Zero-Vault-Balances')}
+        />
+      </FormControl>
 
       {/* <Grid item xs={6} md={3}>
         <FormControl className={classes.selectorContainer}>
