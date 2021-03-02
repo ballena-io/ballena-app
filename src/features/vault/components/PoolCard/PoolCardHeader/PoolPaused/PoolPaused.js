@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import React, { memo } from 'react';
 
 import styles from './styles';
 
@@ -9,9 +9,9 @@ const PoolPaused = ({ message }) => {
   const classes = useStyles();
 
   return (
-      <div className={classes.container}>
-        <div className={classes.texts}>{message}</div>
-      </div>
+    <div className={classes.poolPausedContainer}>
+      <div className={classes.texts}>{message}</div>
+    </div>
   );
 };
 

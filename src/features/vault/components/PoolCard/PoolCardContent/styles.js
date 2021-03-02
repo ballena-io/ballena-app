@@ -5,15 +5,6 @@ const styles = theme => ({
     alignItems: 'center',
     width: '100%',
   },
-  details: {
-    background: theme.palette.background.primary,
-  },
-  detailsPaused: {
-    background: theme.palette.background.paused,
-  },
-  detailsRetired: {
-    background: theme.palette.background.retired,
-  },
   statsContainer: {
     display: 'flex',
     flexDirection: 'column',

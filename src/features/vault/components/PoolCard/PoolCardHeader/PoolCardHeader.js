@@ -24,29 +24,15 @@ const PoolCardHeader = ({ pool }) => {
   };
 
   return (
-    <Grid
-      container
-      className={
-        pool.status === 'eol'
-          ? classes.detailsRetired
-          : pool.depositsPaused
-          ? classes.detailsPaused
-          : classes.details
-      }
-      alignItems="center"
-      spacing={1}
-      style={{ padding: '16px' }}
-    >
+    <Grid container alignItems="center" spacing={1} style={{ padding: '16px' }}>
       <div className={classes.dataContainer}>
-        <div>
-          {vaultStateTitle(pool.status, pool.depositsPaused)}
-          <PoolTitle
-            name={pool.name}
-            logo={pool.logo}
-            description={pool.tokenDescription}
-            url={pool.tokenDescriptionUrl}
-          />
-        </div>
+        {vaultStateTitle(pool.status, pool.depositsPaused)}
+        <PoolTitle
+          name={pool.name}
+          logo={pool.logo}
+          description={pool.tokenDescription}
+          url={pool.tokenDescriptionUrl}
+        />
 
         <PoolCardHeaderActions helpUrl={pool.tokenDescriptionUrl} />
       </div>

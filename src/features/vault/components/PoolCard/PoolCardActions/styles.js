@@ -20,7 +20,6 @@ const styles = theme => ({
     color: theme.palette.grey[500],
   },
   footer: {
-    backgroundColor: theme.palette.background.default,
     width: '100%',
   },
   showDetailButton: {
@@ -28,10 +27,11 @@ const styles = theme => ({
   },
   showDetailButtonContained: {
     backgroundColor: primaryColor[0],
+    color: theme.palette.background.hover,
     '&:hover': {
-      backgroundColor: theme.palette.background.containedButtonHover,
+      backgroundColor: theme.palette.background.hover,
       '& .MuiButton-label': {
-        color: theme.palette.background.hover,
+        color: primaryColor[0],
       },
     },
     fontWeight: 'bold',
