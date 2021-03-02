@@ -25,8 +25,6 @@ const Header = ({ links, isNightMode, setNightMode }) => {
     setMobileOpen(!mobileOpen);
   };
 
-  console.log(links);
-
   return (
     <AppBar className={`${classes.appBar} ${classes.dark}`}>
       <Toolbar className={classes.container}>
