@@ -20,7 +20,16 @@ const PoolCard = ({ pool, index, tokens, apy }) => {
   let sharesBalance = new BigNumber(tokens[pool.earnedToken].tokenBalance);
 
   return (
-    <Card className={classes.container}>
+    <Card
+      className={[
+        classes.container,
+        pool.status === 'eol'
+          ? classes.detailsRetired
+          : pool.depositsPaused
+          ? classes.detailsPaused
+          : classes.details,
+      ]}
+    >
       <PoolCardHeader pool={pool} />
 
       <CardContent>

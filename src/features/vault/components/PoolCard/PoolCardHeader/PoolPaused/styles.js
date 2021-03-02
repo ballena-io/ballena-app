@@ -1,13 +1,13 @@
-const styles = (theme) => ({
-  container: {
+const styles = theme => ({
+  poolPausedContainer: {
     position: 'absolute',
-    top: '0px',
-    left: '0px',
-    backgroundColor: 'rgba(0,0,0,0.15)',
+    backgroundColor: 'rgba(0,0,0,0.60)',
+    margin: '-12px 0 0 -19px',
+    borderRadius: '8px',
   },
   texts: {
-    padding: '5px 10px',
-    fontSize: '14px',
+    padding: '12px',
+    fontSize: '17px',
     fontWeight: 'bold',
   },
 });

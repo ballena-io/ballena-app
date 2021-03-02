@@ -24,7 +24,7 @@ const createTheme = isNightMode =>
         secondary: isNightMode ? DARK_MODE_MEDIUM_BLUE : MEDIUM_BLUE,
         dark: isNightMode ? DARK_BLUE : DARK_BLUE,
         paused: isNightMode ? '#2B2A5A' : '#FCE57E',
-        retired: isNightMode ? '#d32f2f' : '#e57373',
+        retired: '#4D0101',
         hover: isNightMode ? DARK_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
         containedButtonHover: isNightMode ? ACCENT_BLUE : DARK_BLUE,
@@ -59,7 +59,7 @@ const createTheme = isNightMode =>
       },
       MuiButton: {
         label: {
-          color: isNightMode ? WHITE_BLUE : DARK_BLUE,
+          // color: isNightMode ? WHITE_BLUE : DARK_BLUE,
         },
       },
 
@@ -95,7 +95,6 @@ const createTheme = isNightMode =>
       },
       MuiCardActions: {
         root: {
-          backgroundColor: isNightMode ? DARK_BLUE : BRIGHT_BLUE,
           borderTop: ACCENT_BLUE_BORDER,
           padding: '16px',
         },
