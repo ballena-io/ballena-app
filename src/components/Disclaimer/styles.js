@@ -1,19 +1,22 @@
 const styles = theme => ({
-  root: {
+  container: {
     flexGrow: 1,
     alignItems: 'center',
   },
-  textCenter: {
-    textAlign: 'center',
-  },
-  disclaimer: {
+  textContainer: {
     padding: '16px',
     borderRadius: '4px',
-    background: theme.palette.background.secondary,
     marginBottom: '1rem',
     fontWeight: 900,
-    color: theme.palette.text.primary,
     width: '100%',
+  },
+  disclaimer: {
+    background: theme.palette.background.secondary,
+    color: theme.palette.text.primary,
+  },
+  constructionMode: {
+    background: '#F72322',
+    color: '#fff',
   },
 });
 
