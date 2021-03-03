@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -6,6 +5,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import BalleButton from 'components/BalleButton/BalleButton';
 import { useConnectWallet } from 'features/home/redux/hooks';
 import { useFetchHarvest } from 'features/vault/redux/hooks';
 import { useSnackbar } from 'notistack';
@@ -44,6 +44,7 @@ const HarvestSection = ({ pool, index }) => {
             {t('Vault-HarvestConfirm')}
           </Typography>
         </DialogTitle>
+
         <DialogContent>
           <DialogContentText>
             <Typography className={classes.subtitle} variant="body2">
@@ -51,34 +52,25 @@ const HarvestSection = ({ pool, index }) => {
             </Typography>
           </DialogContentText>
         </DialogContent>
+
         <DialogActions>
-          <Button
-            className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined} `}
-            color="primary"
-            onClick={() => setShowHarvestModal(false)}
-          >
+          <BalleButton isOutlined onClick={() => setShowHarvestModal(false)}>
             {t('Cancel')}
-          </Button>
-          <Button
-            className={`${classes.showDetailButton} ${classes.showDetailButtonContained} `}
-            onClick={() => onHarvest()}
-          >
+          </BalleButton>
+          <BalleButton isOutlined onClick={() => onHarvest()}>
             {t('Confirm')}
-          </Button>
+          </BalleButton>
         </DialogActions>
       </Dialog>
 
       <div className={classes.showDetailBottom}>
         <div className={classes.showDetailLeft}>{/* {t('Vault-LastHarvest')}: */}</div>
         <div style={{ textAlign: 'center' }}>
-          <Button
-            className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
-            onClick={() => setShowHarvestModal(true)}
-          >
+          <BalleButton isOutlined onClick={() => setShowHarvestModal(true)}>
             {fetchHarvestPending[index]
               ? `${t('Vault-Harvesting')}`
               : `${t('Vault-HarvestButton')}`}
-          </Button>
+          </BalleButton>
         </div>
       </div>
     </>
