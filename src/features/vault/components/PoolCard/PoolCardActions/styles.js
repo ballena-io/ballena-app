@@ -1,9 +1,10 @@
-import { primaryColor } from 'assets/jss/material-kit-pro-react.js';
-
 const styles = theme => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
+  },
+  balances: {
+    paddingLeft: '12px',
   },
   buttonsContainer: {
     display: 'flex',
@@ -21,37 +22,6 @@ const styles = theme => ({
   },
   footer: {
     width: '100%',
-  },
-  showDetailButton: {
-    borderRadius: '4px',
-  },
-  showDetailButtonContained: {
-    backgroundColor: primaryColor[0],
-    color: theme.palette.background.hover,
-    '&:hover': {
-      backgroundColor: theme.palette.background.hover,
-      '& .MuiButton-label': {
-        color: primaryColor[0],
-      },
-    },
-    fontWeight: 'bold',
-    marginRight: '12px',
-    height: ' 42px',
-  },
-  showDetailButtonOutlined: {
-    backgroundColor: 'transparent',
-    border: `1px solid ${theme.palette.primary.main}`,
-    color: primaryColor[0],
-    fontSize: '12px',
-    '&:hover': {
-      backgroundColor: theme.palette.background.hover,
-      '& .MuiButton-label': {
-        color: theme.palette.background.containedButtonHover,
-      },
-    },
-    '& .MuiTouchRipple-root span': {
-      backgroundColor: primaryColor[0],
-    },
   },
   statsActionsRow: {
     display: 'flex',

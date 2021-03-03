@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import IconButton from '@material-ui/core/IconButton';
@@ -6,6 +5,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import BigNumber from 'bignumber.js';
+import BalleButton from 'components/BalleButton/BalleButton';
 import { byDecimals } from 'features/helpers/bignumber';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -57,15 +57,9 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
-        <div>
-          <Button
-            className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
-            onClick={handleDepositSectionOpen}
-          >
-            {t('Vault-DepositButton')}
-          </Button>
-        </div>
-        <div>
+        <BalleButton onClick={handleDepositSectionOpen}>{t('Vault-DepositButton')}</BalleButton>
+
+        <div className={classes.balances}>
           <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
           <LabeledStat
             value={formatDecimals(
@@ -80,12 +74,9 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
         </div>
       </div>
       <div className={classes.buttonsContainer}>
-        <Button
-          className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
-          onClick={handleWithdrawSectionOpen}
-        >
+        <BalleButton isOutlined onClick={handleWithdrawSectionOpen}>
           {t('Vault-WithdrawButton')}
-        </Button>
+        </BalleButton>
 
         {shouldHideFromHarvest(pool.id) ? '' : <HarvestSection index={index} pool={pool} />}
       </div>

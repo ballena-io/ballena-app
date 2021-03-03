@@ -16,6 +16,7 @@ const ACCENT_BLUE_BORDER = `1px solid ${ACCENT_BLUE}`;
 const createTheme = isNightMode =>
   createMuiTheme({
     palette: {
+      accentBlueBorder: ACCENT_BLUE_BORDER,
       type: isNightMode ? 'dark' : 'light',
       background: {
         default: isNightMode ? DARK_BLUE : BRIGHT_BLUE,
@@ -27,8 +28,17 @@ const createTheme = isNightMode =>
         retired: '#4D0101',
         hover: isNightMode ? DARK_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
-        containedButtonHover: isNightMode ? ACCENT_BLUE : DARK_BLUE,
         cardFooter: isNightMode ? DARK_BLUE : MEDIUM_BLUE,
+      },
+      balleButton: {
+        contained: {
+          color: DARK_BLUE,
+          backgroundColor: ACCENT_BLUE,
+        },
+        outlined: {
+          color: isNightMode ? ACCENT_BLUE : DARK_BLUE,
+          hoverBackgroundColor: DARK_BLUE,
+        },
       },
       walletIcon: {
         color: isNightMode ? WHITE_BLUE : DARK_BLUE,
