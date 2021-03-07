@@ -1,8 +1,7 @@
-import { defaultFont, container, grayColor } from 'assets/jss/material-kit-pro-react.js';
+import { container, grayColor } from 'assets/jss/material-kit-pro-react.js';
 
 const styles = {
   root: {
-    ...defaultFont,
     position: 'relative',
     padding: '20px 15px',
     lineHeight: '20px',

@@ -16,6 +16,8 @@ const ACCENT_BLUE_BORDER = `1px solid ${ACCENT_BLUE}`;
 const createTheme = isNightMode =>
   createMuiTheme({
     palette: {
+      ACCENT_BLUE,
+      DARK_BLUE,
       accentBlueBorder: ACCENT_BLUE_BORDER,
       type: isNightMode ? 'dark' : 'light',
       background: {

@@ -2,6 +2,7 @@
   "Disclaimer": "Using Smart Contracts, Tokens, and Crypto is always a risk. DYOR before investing.",
   "disclaimer-construction": "WARNING: We are in construction mode, don't use the platform if you see this. Stay tuned!",
   "Network-Error": "Network error",
+  "network-error-message": "Please check your wallet configuration and connect again. Are you connected to the Binance Smart Chain network?",
   "Vault-Wallet": "Wallet",
   "Vault-Balance": "Balance",
   "Vault-APY": "APY",

@@ -1,4 +1,5 @@
 import { makeStyles, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
+import Alert from 'components/Alert';
 import Header from 'components/Header/Header';
 import HeaderLinks from 'components/HeaderLinks/HeaderLinks';
 import { Notifier } from 'features/common';
@@ -28,6 +29,7 @@ export default function App({ children }) {
   } = useConnectWallet();
   const { disconnectWallet } = useDisconnectWallet();
   const [web3Modal, setModal] = useState(null);
+  const [networkAlert, setNetworkAlert] = useState(false);
 
   const { isNightMode, setNightMode } = useNightMode();
   const theme = createTheme(isNightMode);
@@ -50,7 +52,7 @@ export default function App({ children }) {
       networkId &&
       Boolean(networkId !== Number(process.env.REACT_APP_NETWORK_ID))
     ) {
-      alert(t('Network-Error'));
+      setNetworkAlert(true);
     }
   }, [web3, address, networkId, connectWalletPending, t]);
 
@@ -76,6 +78,17 @@ export default function App({ children }) {
               isNightMode={isNightMode}
               setNightMode={() => setNightMode(!isNightMode)}
             />
+
+            {networkAlert && (
+              <Alert
+                title={t('Network-Error')}
+                description={t('network-error-message')}
+                link={
+                  'https://docs.ballena.io/tutorials/pc/set-up-metamask-pc/how-to-set-up-metamask-and-the-bsc-network-pc'
+                }
+              />
+            )}
+
             <div className={classes.container}>
               <div className={classes.children}>
                 {Boolean(networkId === Number(process.env.REACT_APP_NETWORK_ID)) && children}

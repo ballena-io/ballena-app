@@ -2,6 +2,7 @@
   "Disclaimer": "Usar Smart Contracts, Tokens y Crypto es siempre un riesgo. Haz tu propio análisis antes de invertir.",
   "disclaimer-construction": "AVISO: Estamos en modo construcción, no uses la plataforma si ves esto. Estamos preparando algo gordo.",
   "Network-Error": "Error de Conexión",
+  "network-error-message": "Revisa la configuración de tu cartera y conéctala de nuevo. Asegurate de usar la red Binance Smart Chain.",
   "Vault-Wallet": "Cartera",
   "Vault-Balance": "Balance",
   "Vault-APY": "APY",
