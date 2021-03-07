@@ -83,9 +83,7 @@ export default function App({ children }) {
               <Alert
                 title={t('Network-Error')}
                 description={t('network-error-message')}
-                link={
-                  'https://docs.ballena.io/tutorials/pc/set-up-metamask-pc/how-to-set-up-metamask-and-the-bsc-network-pc'
-                }
+                link={'https://docs.ballena.io/tutoriales/pc/configurar-wallet-metamask-pc'}
               />
             )}
 
