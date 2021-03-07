@@ -225,7 +225,7 @@ const styles = theme => ({
     fontSize: '18px',
     textDecoration: 'none',
     '&:hover': {
-      color: '#ffffff',
+      color: theme.palette.secondary.main,
     },
     '& span': {
       color: theme.palette.text.primary,

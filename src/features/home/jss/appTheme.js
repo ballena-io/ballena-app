@@ -43,13 +43,13 @@ const createTheme = isNightMode =>
         },
       },
       walletIcon: {
-        color: isNightMode ? WHITE_BLUE : DARK_BLUE,
+        color: isNightMode ? ACCENT_BLUE : DARK_BLUE,
       },
       primary: {
-        main: isNightMode ? ACCENT_BLUE : ACCENT_BLUE,
+        main: ACCENT_BLUE,
       },
       secondary: {
-        main: isNightMode ? WHITE_BLUE : WHITE_BLUE,
+        main: isNightMode ? MEDIUM_BLUE : ACCENT_BLUE,
       },
       text: {
         primary: isNightMode ? DARK_MODE_ACCENT_BLUE : DARK_BLUE,
@@ -71,7 +71,7 @@ const createTheme = isNightMode =>
       },
       MuiButton: {
         label: {
-          // color: isNightMode ? WHITE_BLUE : DARK_BLUE,
+          color: isNightMode ? ACCENT_BLUE : DARK_BLUE,
         },
       },
 

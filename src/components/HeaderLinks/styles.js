@@ -216,6 +216,9 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.secondary,
     color: '#fff',
     '&:hover': {
+      '& .MuiButton-label': {
+        color: theme.palette.background.secondary,
+      },
       backgroundColor: theme.palette.background.border,
     },
     [theme.breakpoints.up('md')]: {

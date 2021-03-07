@@ -6,6 +6,9 @@ const styles = theme => ({
   balleButtonContained: {
     backgroundColor: theme.palette.balleButton.contained.backgroundColor,
     color: theme.palette.balleButton.contained.color,
+    '& .MuiButton-label': {
+      color: theme.palette.balleButton.contained.color,
+    },
     '&:hover': {
       backgroundColor: theme.palette.balleButton.contained.color,
       padding: '0 -1px',
@@ -22,7 +25,9 @@ const styles = theme => ({
     color: theme.palette.balleButton.outlined.color,
     fontSize: '13px',
     '&:hover': {
-      color: theme.palette.balleButton.contained.backgroundColor,
+      '& .MuiButton-label': {
+        color: theme.palette.balleButton.contained.backgroundColor,
+      },
       backgroundColor: theme.palette.balleButton.outlined.hoverBackgroundColor,
     },
   },

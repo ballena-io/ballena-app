@@ -15,7 +15,7 @@ const BalleButton = ({ children, onClick, isOutlined }) => {
   ];
 
   return (
-    <Button className={styles} onClick={onClick}>
+    <Button color="primary" className={styles} onClick={onClick}>
       {children}
     </Button>
   );

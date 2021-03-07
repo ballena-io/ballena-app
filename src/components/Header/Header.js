@@ -53,13 +53,8 @@ const Header = ({ links, isNightMode, setNightMode }) => {
         </Button>
 
         <span>
-          {/* {renderLink('Barn', 'barn', undefined, classes)} */}
           {renderLink('docs', 'Docs', undefined, classes)}
-          <Hidden xsDown>
-            {/* {renderLink('Vote', 'vote', undefined, classes)} */}
-            {/* {renderLink('Gov', 'gov', undefined, classes)} */}
-            {renderLink('dashboard', t('stats'), undefined, classes)}
-          </Hidden>
+          <Hidden xsDown>{renderLink('dashboard', t('stats'), undefined, classes)}</Hidden>
           {renderLink('buy', t('buy'), undefined, classes)}
         </span>
 
@@ -97,9 +92,6 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           </IconButton>
           <div className={classes.sideMenuContainer}>
             <div className={classes.appResponsive}>{links}</div>
-            {/* {renderLinkSidebar('Gov', 'gov', undefined, classes)} */}
-            {/* {renderLinkSidebar('Barn', 'barn', undefined, classes)} */}
-            {/* {renderLinkSidebar('Vote', 'vote', undefined, classes)} */}
             {renderLinkSidebar('dashboard', t('stats'), undefined, classes)}
             {renderLinkSidebar('docs', 'Docs', undefined, classes)}
             {renderLinkSidebar('buy', t('buy'), undefined, classes)}
