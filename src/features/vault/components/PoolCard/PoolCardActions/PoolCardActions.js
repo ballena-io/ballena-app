@@ -55,18 +55,18 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
-        <div>
-          <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
-          <LabeledStat
-            value={formatDecimals(
-              byDecimals(
-                sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
-                pool.tokenDecimals
-              )
-            )}
-            label={t('Vault-Deposited')}
-          />
-        </div>
+        {/* <div> */}
+        <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
+        <LabeledStat
+          value={formatDecimals(
+            byDecimals(
+              sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
+              pool.tokenDecimals
+            )
+          )}
+          label={t('Vault-Deposited')}
+        />
+        {/* </div> */}
       </div>
       <div className={classes.buttonsContainer}>
         <BalleButton onClick={handleDepositSectionOpen}>{t('Vault-DepositButton')}</BalleButton>
