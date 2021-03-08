@@ -25,7 +25,7 @@
   "Vault-Withdrawing": "Retirando...",
   "Vault-WithdrawButton": "Retirar",
   "Vault-WithdrawButtonAll": "Retirar Todo",
-  "Vault-WithdrawFee": "Hay una tarifa de retiro del 0.05%-0.1% en todas las bóvedas",
+  "Vault-WithdrawFee": "Hay una tarifa de retiro del 0.1% en todas las bóvedas",
   "Vault-WithdrawSuccess": "Retirado con éxito",
   "Vault-WithdrawError": "Error al retirar: {{error}}",
   "Vault-MainTitle": "Bóvedas",

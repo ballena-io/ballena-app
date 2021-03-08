@@ -18,7 +18,7 @@
   "Vault-Withdrawing": "Retirando...",
   "Vault-WithdrawButton": "Retirar",
   "Vault-WithdrawButtonAll": "Retirar tudo",
-  "Vault-WithdrawFee": "Há uma taxa de retirada de 0.05%-0.1% em todos os cofres",
+  "Vault-WithdrawFee": "Há uma taxa de retirada de 0.1% em todos os cofres",
   "Vault-WithdrawSuccess": "Sacado com sucesso",
   "Vault-WithdrawError": "Erro ao sacar: {{error}}",
   "Vault-Harvesting": "Colhendo...",

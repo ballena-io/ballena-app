@@ -14,7 +14,7 @@
   "Vault-Withdrawing": "Abheben...",
   "Vault-WithdrawButton": "Abheben",
   "Vault-WithdrawButtonAll": "Alles abheben",
-  "Vault-WithdrawFee": "Für alle Vaults wird eine Abhebegebühr von 0.05%-0.1% erhoben",
+  "Vault-WithdrawFee": "Für alle Vaults wird eine Abhebegebühr von 0.1% erhoben",
   "Vault-Harvesting": "Am Harvesten...",
   "Vault-HarvestButton": "Harvest",
   "Vault-HarvestConfirm": "Harvest bestätigen?",
