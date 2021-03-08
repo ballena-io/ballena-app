@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import PoolCardHeaderActions from './PoolCardHeaderActions/PoolCardHeaderActions';
 import PoolPaused from './PoolPaused/PoolPaused';
 import PoolTitle from './PoolTitle/PoolTitle';
 import styles from './styles';
@@ -34,7 +33,7 @@ const PoolCardHeader = ({ pool }) => {
           url={pool.tokenDescriptionUrl}
         />
 
-        <PoolCardHeaderActions helpUrl={pool.tokenDescriptionUrl} />
+        {/* <PoolCardHeaderActions helpUrl={pool.tokenDescriptionUrl} /> */}
       </div>
     </Grid>
   );
