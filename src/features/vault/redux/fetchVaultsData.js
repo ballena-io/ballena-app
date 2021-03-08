@@ -19,10 +19,10 @@ export function fetchVaultsData({ address, web3, pools }) {
     });
 
     const promise = new Promise((resolve, reject) => {
-      const multicall = new MultiCall(web3, '0xB94858b0bB5437498F5453A16039337e5Fdc269C');
+      const multicall = new MultiCall(web3, '0x49E8E5CCE37D04bA00E0E5960C4448141671A559');
 
       const tokenCalls = pools.map(pool => {
-        const bnbShimAddress = '0xC72E5edaE5D7bA628A2Acb39C8Aa0dbbD06daacF';
+        const bnbShimAddress = '0x4677058d5A23438B51945F45fCadf654Df1C2B6c';
         const token = new web3.eth.Contract(erc20ABI, pool.tokenAddress || bnbShimAddress);
         return {
           allowance: token.methods.allowance(address, pool.earnContractAddress),

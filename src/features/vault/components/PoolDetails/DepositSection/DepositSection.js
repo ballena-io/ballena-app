@@ -10,7 +10,7 @@ import CustomOutlinedInput from 'components/CustomOutlinedInput/CustomOutlinedIn
 import { useFetchDeposit, useFetchApproval } from 'features/vault/redux/hooks';
 import CustomSlider from 'components/CustomSlider/CustomSlider';
 import { useConnectWallet } from 'features/home/redux/hooks';
-import { inputLimitPass, inputFinalVal, shouldHideFromHarvest } from 'features/helpers/utils';
+import { inputLimitPass, inputFinalVal } from 'features/helpers/utils';
 import { byDecimals, calculateReallyNum, format } from 'features/helpers/bignumber';
 import Button from 'components/CustomButtons/Button.js';
 import styles from './styles';
@@ -140,7 +140,7 @@ const DepositSection = ({ pool, index, balanceSingle }) => {
   const vaultState = getVaultState(pool.status, pool.depositsPaused);
 
   return (
-    <Grid item xs={12} md={shouldHideFromHarvest(pool.id) ? 6 : 5} className={classes.sliderDetailContainer}>
+    <Grid item xs={12} md={5} className={classes.sliderDetailContainer}>
       <div className={classes.showDetailLeft}>
         {t('Vault-Balance')}: {balanceSingle.toFormat(4)} {pool.token}
       </div>
