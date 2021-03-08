@@ -1,6 +1,9 @@
 const styles = theme => ({
   container: {
     paddingTop: '4px',
+    width: '100%',
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
   },
   titles: {
     display: 'flex',

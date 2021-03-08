@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Grid from '@material-ui/core/Grid';
-import BigNumber from 'bignumber.js';
-import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
-import { useSnackbar } from 'notistack';
-
-import CustomOutlinedInput from 'components/CustomOutlinedInput/CustomOutlinedInput';
-import { useFetchDeposit, useFetchApproval } from 'features/vault/redux/hooks';
-import CustomSlider from 'components/CustomSlider/CustomSlider';
-import { useConnectWallet } from 'features/home/redux/hooks';
-import { inputLimitPass, inputFinalVal } from 'features/helpers/utils';
-import { byDecimals, calculateReallyNum, format } from 'features/helpers/bignumber';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import BigNumber from 'bignumber.js';
 import Button from 'components/CustomButtons/Button.js';
+import CustomOutlinedInput from 'components/CustomOutlinedInput/CustomOutlinedInput';
+import CustomSlider from 'components/CustomSlider/CustomSlider';
+import { byDecimals, calculateReallyNum, format } from 'features/helpers/bignumber';
+import { inputFinalVal, inputLimitPass } from 'features/helpers/utils';
+import { useConnectWallet } from 'features/home/redux/hooks';
+import { useFetchApproval, useFetchDeposit } from 'features/vault/redux/hooks';
+import { useSnackbar } from 'notistack';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
@@ -117,30 +117,34 @@ const DepositSection = ({ pool, index, balanceSingle }) => {
   };
 
   const getVaultState = (status, paused) => {
-    let display = false
-    let cont = null
+    let display = false;
+    let cont = null;
 
-    if(status === 'eol') {
+    if (status === 'eol') {
       display = true;
-      cont = <div className={classes.showDetailButtonCon}>
-        <div className={classes.showRetiredMsg}>{t('Vault-DepositsRetiredMsg')}</div>
-      </div>
-    } else {
-      if(paused) {
-        display = true;
-        cont = <div className={classes.showDetailButtonCon}>
-          <div className={classes.showPausedMsg}>{t('Vault-DepositsPausedMsg')}</div>
+      cont = (
+        <div className={classes.showDetailButtonCon}>
+          <div className={classes.showRetiredMsg}>{t('Vault-DepositsRetiredMsg')}</div>
         </div>
+      );
+    } else {
+      if (paused) {
+        display = true;
+        cont = (
+          <div className={classes.showDetailButtonCon}>
+            <div className={classes.showPausedMsg}>{t('Vault-DepositsPausedMsg')}</div>
+          </div>
+        );
       }
     }
 
-    return {display:display, content: cont}
-  }
+    return { display: display, content: cont };
+  };
 
   const vaultState = getVaultState(pool.status, pool.depositsPaused);
 
   return (
-    <Grid item xs={12} md={5} className={classes.sliderDetailContainer}>
+    <Grid item xs={12} md={6} className={classes.sliderDetailContainer}>
       <div className={classes.showDetailLeft}>
         {t('Vault-Balance')}: {balanceSingle.toFormat(4)} {pool.token}
       </div>
@@ -152,53 +156,59 @@ const DepositSection = ({ pool, index, balanceSingle }) => {
         value={depositBalance.slider}
         onChange={handleDepositedBalance}
       />
-      {vaultState.display === true ? vaultState.content : (
-      <div>
-        {pool.allowance === 0 ? (
-          <div className={classes.showDetailButtonCon}>
-            <Button
-              className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
-              onClick={onApproval}
-              disabled={pool.depositsPaused || fetchApprovalPending[index]}
-            >
-              {fetchApprovalPending[index]
-                ? `${t('Vault-Approving')}`
-                : `${t('Vault-ApproveButton')}`}
-            </Button>
-          </div>
-        ) : (
-          <div className={classes.showDetailButtonCon}>
-            <Button
-              className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
-              color="primary"
-              disabled={
-                pool.depositsPaused ||
-                !Boolean(depositBalance.amount) ||
-                fetchDepositPending[index] ||
-                new BigNumber(depositBalance.amount).toNumber() > balanceSingle.toNumber()
-              }
-              onClick={() => onDeposit(false)}
-            >
-              {t('Vault-DepositButton')}
-            </Button>
-            {Boolean(pool.tokenAddress) && (
+      {vaultState.display === true ? (
+        vaultState.content
+      ) : (
+        <div>
+          {pool.allowance === 0 ? (
+            <div className={classes.showDetailButtonCon}>
               <Button
                 className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
+                onClick={onApproval}
+                disabled={pool.depositsPaused || fetchApprovalPending[index]}
+              >
+                {fetchApprovalPending[index]
+                  ? `${t('Vault-Approving')}`
+                  : `${t('Vault-ApproveButton')}`}
+              </Button>
+            </div>
+          ) : (
+            <div className={classes.showDetailButtonCon}>
+              <Button
+                className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
+                color="primary"
                 disabled={
                   pool.depositsPaused ||
+                  !Boolean(depositBalance.amount) ||
                   fetchDepositPending[index] ||
                   new BigNumber(depositBalance.amount).toNumber() > balanceSingle.toNumber()
                 }
-                onClick={() => onDeposit(true)}
+                onClick={() => onDeposit(false)}
               >
-                {t('Vault-DepositButtonAll')}
+                {t('Vault-DepositButton')}
               </Button>
-            )}
-          </div>
-        )}
-      </div>
+              {Boolean(pool.tokenAddress) && (
+                <Button
+                  className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
+                  disabled={
+                    pool.depositsPaused ||
+                    fetchDepositPending[index] ||
+                    new BigNumber(depositBalance.amount).toNumber() > balanceSingle.toNumber()
+                  }
+                  onClick={() => onDeposit(true)}
+                >
+                  {t('Vault-DepositButtonAll')}
+                </Button>
+              )}
+            </div>
+          )}
+        </div>
       )}
-      {pool.platform === 'Auto' ? <h3 className={classes.subtitle}>{t('Vault-DepositFee')}</h3> : ''}
+      {pool.platform === 'Auto' ? (
+        <h3 className={classes.subtitle}>{t('Vault-DepositFee')}</h3>
+      ) : (
+        ''
+      )}
     </Grid>
   );
 };

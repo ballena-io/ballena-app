@@ -1,15 +1,15 @@
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import { formatGlobalTvl } from 'features/helpers/format';
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
-import TVLLoader from './TVLLoader/TVLLoader';
 import { useConnectWallet } from '../../../home/redux/hooks';
-import { useFetchBalances, useFetchVaultsData, useFetchApys } from '../../redux/hooks';
+import usePoolsTvl from '../../hooks/usePoolsTvl';
+import { useFetchApys, useFetchBalances, useFetchVaultsData } from '../../redux/hooks';
 import VisiblePools from '../VisiblePools/VisiblePools';
 import styles from './styles';
-import usePoolsTvl from '../../hooks/usePoolsTvl';
-import { formatGlobalTvl } from 'features/helpers/format';
+import TVLLoader from './TVLLoader/TVLLoader';
 
 const FETCH_INTERVAL_MS = 30 * 1000;
 
@@ -42,7 +42,7 @@ export default function Pools() {
   }, [address, web3, fetchBalances, fetchVaultsData]);
 
   return (
-    <Grid container className={classes.container}>
+    <div className={classes.container}>
       <Grid item xs={12}>
         <div className={classes.titles}>
           <h1 className={classes.title}>{t('Vault-MainTitle')}</h1>
@@ -62,6 +62,6 @@ export default function Pools() {
       </Grid>
 
       <VisiblePools pools={pools} apys={apys} tokens={tokens} />
-    </Grid>
+    </div>
   );
 }

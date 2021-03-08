@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import Grid from '@material-ui/core/Grid';
-import BigNumber from 'bignumber.js';
-import { makeStyles } from '@material-ui/core/styles';
-import { useTranslation } from 'react-i18next';
-import { useSnackbar } from 'notistack';
 import FormControl from '@material-ui/core/FormControl';
-
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import BigNumber from 'bignumber.js';
 import Button from 'components/CustomButtons/Button.js';
 import CustomOutlinedInput from 'components/CustomOutlinedInput/CustomOutlinedInput';
 import CustomSlider from 'components/CustomSlider/CustomSlider';
-import RefundButtons from '../RefundButtons/RefundButtons';
 import { byDecimals, calculateReallyNum } from 'features/helpers/bignumber';
-import { inputLimitPass, inputFinalVal } from 'features/helpers/utils';
-import { useFetchWithdraw } from 'features/vault/redux/hooks';
+import { inputFinalVal, inputLimitPass } from 'features/helpers/utils';
 import { useConnectWallet } from 'features/home/redux/hooks';
+import { useFetchWithdraw } from 'features/vault/redux/hooks';
+import { useSnackbar } from 'notistack';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import RefundButtons from '../RefundButtons/RefundButtons';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
@@ -107,7 +107,7 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
   };
 
   return (
-    <Grid item xs={12} md={5} className={classes.sliderDetailContainer}>
+    <Grid item xs={12} md={6} className={classes.sliderDetailContainer}>
       <div className={classes.showDetailLeft}>
         {t('Vault-Deposited')}:{' '}
         {byDecimals(
