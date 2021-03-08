@@ -24,7 +24,7 @@ const PoolCardHeader = ({ pool }) => {
   };
 
   return (
-    <Grid container alignItems="center" spacing={1} className={classes.container}>
+    <Grid container spacing={1} className={classes.container}>
       <div className={classes.dataContainer}>
         {vaultStateTitle(pool.status, pool.depositsPaused)}
         <PoolTitle
