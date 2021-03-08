@@ -24,7 +24,6 @@ const initialState = {
   fetchApprovalPending: {},
   fetchDepositPending: {},
   fetchWithdrawPending: {},
-  fetchHarvestPending: {},
 };
 
 export default initialState;

@@ -1,7 +1,11 @@
 const styles = theme => ({
   container: {
     display: 'flex',
+    justifyContent: 'space-between',
     width: '100%',
+    '&:not(:last-child)': {
+      paddingBottom: '6px',
+    },
   },
   centerContainer: {
     display: 'flex',
@@ -11,7 +15,7 @@ const styles = theme => ({
     justifyContent: 'center',
   },
   stat: {
-    fontSize: '16px',
+    fontSize: '18px',
     fontWeight: 'bold',
     color: theme.palette.text.primary,
     lineHeight: '18px',

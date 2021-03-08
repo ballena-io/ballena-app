@@ -14,14 +14,9 @@ const PoolCardContent = ({ pool, balanceSingle, sharesBalance, apy }) => {
 
   return (
     <div className={classes.statsContainer}>
-      <div className={classes.statsRow}>
-        <LabeledStat value={formatApy(apy)} label={t('Vault-APY')} center={true} />
-        <LabeledStat value={calcDaily(apy)} label={t('Vault-APYDaily')} center />
-      </div>
-
-      <div className={classes.statsRow}>
-        <LabeledStat value={formatTvl(pool.tvl, pool.oraclePrice)} label={t('Vault-TVL')} center />
-      </div>
+      <LabeledStat value={formatApy(apy)} label={t('Vault-APY')} />
+      <LabeledStat value={calcDaily(apy)} label={t('Vault-APYDaily')} />
+      <LabeledStat value={formatTvl(pool.tvl, pool.oraclePrice)} label={t('Vault-TVL')} />
     </div>
   );
 };

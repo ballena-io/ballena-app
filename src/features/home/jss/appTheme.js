@@ -107,8 +107,7 @@ const createTheme = isNightMode =>
       },
       MuiCardActions: {
         root: {
-          borderTop: ACCENT_BLUE_BORDER,
-          padding: '16px',
+          padding: '0 16px 16px 16px',
         },
       },
     },

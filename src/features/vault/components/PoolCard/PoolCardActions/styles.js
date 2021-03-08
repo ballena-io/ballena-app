@@ -1,10 +1,7 @@
 const styles = theme => ({
-  root: {
+  dialogTitleContainer: {
     margin: 0,
     padding: theme.spacing(2),
-  },
-  balances: {
-    paddingLeft: '12px',
   },
   buttonsContainer: {
     display: 'flex',
@@ -18,7 +15,7 @@ const styles = theme => ({
     position: 'absolute',
     right: theme.spacing(1),
     top: theme.spacing(1),
-    color: theme.palette.grey[500],
+    color: theme.palette.ACCENT_BLUE,
   },
   footer: {
     width: '100%',
@@ -26,8 +23,7 @@ const styles = theme => ({
   statsActionsRow: {
     display: 'flex',
     paddingBottom: '12px',
-    justifyContent: 'start',
-    alignItems: 'center',
+    flexDirection: 'column',
   },
 });
 

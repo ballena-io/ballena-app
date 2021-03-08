@@ -1,4 +1,8 @@
 const styles = theme => ({
+  container: {
+    alignItems: 'center',
+    padding: '16px 16px 8px 16px',
+  },
   dataContainer: {
     display: 'flex',
     width: '100%',
