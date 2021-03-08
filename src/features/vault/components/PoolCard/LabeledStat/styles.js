@@ -17,7 +17,7 @@ const styles = theme => ({
   stat: {
     fontSize: '18px',
     fontWeight: 'bold',
-    color: theme.palette.text.primary,
+    color: theme.palette.text.secondary,
     lineHeight: '18px',
     letterSpacing: 0,
     padding: '0 8px 4px 0',
@@ -25,7 +25,7 @@ const styles = theme => ({
   label: {
     fontSize: '16px',
     fontWeight: '400',
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
     lineHeight: '18px',
     letterSpacing: 0,
     paddingRight: '8px',
