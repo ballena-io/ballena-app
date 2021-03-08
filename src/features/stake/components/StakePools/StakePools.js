@@ -58,7 +58,7 @@ export default function StakePools() {
       <Hidden smUp>
         <img className={classes.banner} src={mobileBanner} alt="stake TWT earn IFO tokens" />
       </Hidden>
-      <div className={classes.poweredByBeefy}>{t('Powered-By')} BEEFY.FINANCE</div>
+      <div className={classes.poweredByBeefy}>{t('Powered-By')} ballena.io</div>
       <Switch
         className={classes.switch}
         value={switchValue}
@@ -94,14 +94,14 @@ export default function StakePools() {
         <Grid item xs={12} md={5}>
           <img className={classes.image} src={projects} alt="project logos" />
           <div className={classes.links}>
-            <a href="https://beefy.finance/" target="_blank" rel="noopener noreferrer">
-              beefy.finance
+            <a href="https://ballena.io/" target="_blank" rel="noopener noreferrer">
+              ballena.io
             </a>
             <a href="https://trustwallet.com/" target="_blank" rel="noopener noreferrer">
               Trust Wallet
             </a>
             <a
-              href="https://docs.beefy.finance/beefyfinance/"
+              href="https://docs.ballena.io/beefyfinance/"
               target="_blank"
               rel="noopener noreferrer"
             >

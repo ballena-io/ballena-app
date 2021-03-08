@@ -25,11 +25,11 @@ export function fetchBalances({ address, web3, tokens }) {
         });
       }
 
-      const multicall = new MultiCall(web3, '0xB94858b0bB5437498F5453A16039337e5Fdc269C');
+      const multicall = new MultiCall(web3, '0x49E8E5CCE37D04bA00E0E5960C4448141671A559');
 
       const calls = tokensList.map(token => {
         if (!token.tokenAddress) {
-          const shimAddress = '0xC72E5edaE5D7bA628A2Acb39C8Aa0dbbD06daacF';
+          const shimAddress = '0x4677058d5A23438B51945F45fCadf654Df1C2B6c';
           const shimContract = new web3.eth.Contract(multicallBnbShimABI, shimAddress);
           return {
             tokenBalance: shimContract.methods.balanceOf(address),
