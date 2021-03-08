@@ -10,11 +10,9 @@ import { byDecimals } from 'features/helpers/bignumber';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { shouldHideFromHarvest } from '../../../../helpers/utils';
 import { formatDecimals } from '../helpers';
 import LabeledStat from '../LabeledStat/LabeledStat';
 import DepositSection from './DepositSection/DepositSection';
-import HarvestSection from './HarvestSection/HarvestSection';
 import styles from './styles';
 import WithdrawSection from './WithdrawSection/WithdrawSection';
 
@@ -23,7 +21,7 @@ const useStyles = makeStyles(styles);
 const DialogTitle = withStyles(styles)(props => {
   const { children, classes, onClose, ...other } = props;
   return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+    <MuiDialogTitle disableTypography className={classes.dialogTitleContainer} {...other}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
         <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
@@ -57,9 +55,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
-        <BalleButton onClick={handleDepositSectionOpen}>{t('Vault-DepositButton')}</BalleButton>
-
-        <div className={classes.balances}>
+        <div>
           <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
           <LabeledStat
             value={formatDecimals(
@@ -69,16 +65,14 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
               )
             )}
             label={t('Vault-Deposited')}
-            align="start"
           />
         </div>
       </div>
       <div className={classes.buttonsContainer}>
+        <BalleButton onClick={handleDepositSectionOpen}>{t('Vault-DepositButton')}</BalleButton>
         <BalleButton isOutlined onClick={handleWithdrawSectionOpen}>
           {t('Vault-WithdrawButton')}
         </BalleButton>
-
-        {shouldHideFromHarvest(pool.id) ? '' : <HarvestSection index={index} pool={pool} />}
       </div>
 
       <Dialog onClose={handleClose} aria-labelledby="deposit-section" open={openDepositSection}>

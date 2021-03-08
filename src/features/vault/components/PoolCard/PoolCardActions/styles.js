@@ -1,10 +1,7 @@
 const styles = theme => ({
-  root: {
+  dialogTitleContainer: {
     margin: 0,
     padding: theme.spacing(2),
-  },
-  balances: {
-    paddingLeft: '12px',
   },
   buttonsContainer: {
     display: 'flex',
