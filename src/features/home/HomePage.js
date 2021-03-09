@@ -8,7 +8,7 @@ export default function HomePage() {
   const { t } = useTranslation();
   return (
     <>
-      <Disclaimer text={t('disclaimer-construction')} />
+      <Disclaimer text={t('disclaimer-launching')} />
       <Pools fromPage="home" />
     </>
   );
