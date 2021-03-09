@@ -54,7 +54,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
 
         <span>
           {renderLink('docs', 'Docs', undefined, classes)}
-          <Hidden xsDown>{renderLink('dashboard', t('stats'), undefined, classes)}</Hidden>
+          {/* <Hidden xsDown>{renderLink('dashboard', t('stats'), undefined, classes)}</Hidden> */}
           {renderLink('buy', t('buy'), undefined, classes)}
         </span>
 
@@ -92,7 +92,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           </IconButton>
           <div className={classes.sideMenuContainer}>
             <div className={classes.appResponsive}>{links}</div>
-            {renderLinkSidebar('dashboard', t('stats'), undefined, classes)}
+            {/* {renderLinkSidebar('dashboard', t('stats'), undefined, classes)} */}
             {renderLinkSidebar('docs', 'Docs', undefined, classes)}
             {renderLinkSidebar('buy', t('buy'), undefined, classes)}
             <IconButton onClick={setNightMode} className={classes.icon}>
