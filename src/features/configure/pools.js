@@ -23,4 +23,28 @@ export const pools = [
     callFee: 0.0,
   },
 
+  {
+    id: 'cake-dot-bnb',
+    logo: 'cake/dot-bnb.svg',
+    name: 'DOT-BNB LP',
+    token: 'DOT-BNB LP',
+    tokenDescription: 'Uses: Pancake',
+    tokenAddress: '0xbcd62661a6b1ded703585d3af7d7649ef4dcdb5c',
+    tokenDecimals: 18,
+    tokenDescriptionUrl: '#',
+    earnedToken: 'ballePancakeDOT-BNB',
+    earnedTokenAddress: '0x298109EB662bB12eD0b0639280aBa0b4E3bE89Cc',
+    earnContractAddress: '0x298109EB662bB12eD0b0639280aBa0b4E3bE89Cc',
+    pricePerFullShare: 1,
+    tvl: 0,
+    oracle: 'pancake-lp',
+    oracleId: 'cake-dot-bnb',
+    oraclePrice: 0,
+    depositsPaused: false,
+    status: 'active',
+    platform: 'Pancake',
+    assets: ['DOT', 'BNB'],
+    callFee: 0.0,
+  },
+
 ];
