@@ -5,7 +5,7 @@ export const pools = [
     name: 'bALBT-BNB LP',
     token: 'bALBT-BNB LP',
     tokenDescription: 'Uses: Pancake',
-    tokenAddress: '0xa09E3d70dF741961F1974f19AdFeaCb6eCaBaE33',
+    tokenAddress: '0xbe14f3a89A4F7f279Af9d99554cf12E8C29dB921',
     tokenDecimals: 18,
     tokenDescriptionUrl: '#',
     earnedToken: 'ballePancakeBALBT-BNB',
