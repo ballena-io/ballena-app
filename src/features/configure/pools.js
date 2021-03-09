@@ -47,4 +47,29 @@ export const pools = [
     callFee: 0.0,
   },
 
+  {
+    id: 'cake-inj-bnb',
+    logo: 'cake/inj-bnb.svg',
+    name: 'INJ-BNB LP',
+    token: 'INJ-BNB LP',
+    tokenDescription: 'Uses: Pancake',
+    tokenAddress: '0x7a34bd64d18e44cfde3ef4b81b87baf3eb3315b6',
+    tokenDecimals: 18,
+    tokenDescriptionUrl: '#',
+    earnedToken: 'ballePancakeINJ-BNB',
+    earnedTokenAddress: '0xd3fFC946D938a3DD36B987030874b1E97b9cD427',
+    earnContractAddress: '0xd3fFC946D938a3DD36B987030874b1E97b9cD427',
+    pricePerFullShare: 1,
+    tvl: 0,
+    oracle: 'pancake-lp',
+    oracleId: 'cake-inj-bnb',
+    oraclePrice: 0,
+    depositsPaused: false,
+    status: 'active',
+    platform: 'Pancake',
+    assets: ['INJ', 'BNB'],
+    callFee: 0.0,
+  },
+
+  
 ];
