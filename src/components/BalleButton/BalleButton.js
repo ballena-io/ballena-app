@@ -6,7 +6,7 @@ import styles from './styles';
 
 const useStyles = makeStyles(styles);
 
-const BalleButton = ({ children, onClick, isOutlined }) => {
+const BalleButton = ({ children, onClick, isOutlined, disabled }) => {
   const classes = useStyles();
 
   const styles = [
@@ -15,7 +15,7 @@ const BalleButton = ({ children, onClick, isOutlined }) => {
   ];
 
   return (
-    <Button color="primary" className={styles} onClick={onClick}>
+    <Button color="primary" className={styles} onClick={onClick} disabled={disabled}>
       {children}
     </Button>
   );
