@@ -9,8 +9,6 @@ import PoolCardContent from './PoolCardContent/PoolCardContent';
 import PoolCardHeader from './PoolCardHeader/PoolCardHeader';
 import styles from './styles';
 
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// import clsx from 'clsx';
 const useStyles = makeStyles(styles);
 
 const PoolCard = ({ pool, index, tokens, apy }) => {
@@ -33,12 +31,7 @@ const PoolCard = ({ pool, index, tokens, apy }) => {
       <PoolCardHeader pool={pool} />
 
       <CardContent>
-        <PoolCardContent
-          pool={pool}
-          balanceSingle={balanceSingle}
-          sharesBalance={sharesBalance}
-          apy={apy}
-        />
+        <PoolCardContent pool={pool} apy={apy} />
       </CardContent>
 
       <CardActions>
@@ -49,25 +42,6 @@ const PoolCard = ({ pool, index, tokens, apy }) => {
           index={index}
         />
       </CardActions>
-
-      {/* <CardActions disableSpacing>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: isOpen,
-          })}
-          onClick={toggleCard}
-          aria-expanded={isOpen}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions> */}
-      {/* <Collapse in={isOpen} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Details:</Typography>
-          <Typography paragraph>Heat we can add some details.</Typography>
-        </CardContent>
-      </Collapse> */}
     </Card>
   );
 };
