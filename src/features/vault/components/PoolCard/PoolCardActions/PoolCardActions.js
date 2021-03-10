@@ -63,7 +63,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
             )
           )}
           //TODO: Add translation
-          label={'BALLE Earned: '}
+          label={'BALLE Earned'}
         />
         <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
         <LabeledStat
