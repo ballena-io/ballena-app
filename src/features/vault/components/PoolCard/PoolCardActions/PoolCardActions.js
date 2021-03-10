@@ -55,6 +55,16 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
+        <LabeledStat
+          value={formatDecimals(
+            byDecimals(
+              sharesBalance.multipliedBy(new BigNumber(pool.rewardPerFullShare)),
+              pool.tokenDecimals
+            )
+          )}
+          //TODO: Add translation
+          label={'BALLE Earned'}
+        />
         <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
         <LabeledStat
           value={formatDecimals(
