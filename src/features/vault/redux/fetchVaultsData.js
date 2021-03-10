@@ -1,16 +1,17 @@
-import { useCallback } from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-import BigNumber from 'bignumber.js';
 import async from 'async';
+import BigNumber from 'bignumber.js';
 import { MultiCall } from 'eth-multicall';
+import { byDecimals } from 'features/helpers/bignumber';
+import { useCallback } from 'react';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+
+import { erc20ABI, vaultABI } from '../../configure';
+import { fetchPrice } from '../../web3';
 import {
   VAULT_FETCH_VAULTS_DATA_BEGIN,
-  VAULT_FETCH_VAULTS_DATA_SUCCESS,
   VAULT_FETCH_VAULTS_DATA_FAILURE,
+  VAULT_FETCH_VAULTS_DATA_SUCCESS,
 } from './constants';
-import { fetchPrice } from '../../web3';
-import { erc20ABI, vaultABI } from '../../configure';
-import { byDecimals } from 'features/helpers/bignumber';
 
 export function fetchVaultsData({ address, web3, pools }) {
   return dispatch => {
@@ -89,10 +90,13 @@ export function fetchVaultsData({ address, web3, pools }) {
           const newPools = pools.map((pool, i) => {
             const allowance = web3.utils.fromWei(data[0][i].allowance, 'ether');
             const pricePerFullShare = byDecimals(data[1][i].pricePerFullShare, 18).toNumber();
+            const rewardPerFullShare = byDecimals(data[1][i].rewardPerFullShare, 18).toNumber();
+
             return {
               ...pool,
               allowance: new BigNumber(allowance).toNumber() || 0,
               pricePerFullShare: new BigNumber(pricePerFullShare).toNumber() || 1,
+              rewardPerFullShare: new BigNumber(rewardPerFullShare).toNumber(),
               tvl: byDecimals(data[1][i].tvl, 18).toNumber(),
               oraclePrice: data[2][i] || 0,
             };
