@@ -30,6 +30,9 @@ const styles = theme => ({
     letterSpacing: 0,
     paddingRight: '8px',
   },
+  values: {
+    textAlign: 'right',
+  },
 });
 
 export default styles;

@@ -8,7 +8,7 @@ import styles from './styles';
 
 const useStyles = makeStyles(styles);
 
-const PoolCardContent = ({ pool, balanceSingle, sharesBalance, apy }) => {
+const PoolCardContent = ({ pool, apy }) => {
   const { t } = useTranslation();
   const classes = useStyles();
 

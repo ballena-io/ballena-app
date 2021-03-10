@@ -52,30 +52,36 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
     setOpenWithdrawSection(false);
   };
 
+  const balleEarned = formatDecimals(
+    byDecimals(
+      sharesBalance.multipliedBy(new BigNumber(pool.rewardPerFullShare)),
+      pool.tokenDecimals
+    )
+  );
+
+  const depositedValue = formatDecimals(
+    byDecimals(
+      sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
+      pool.tokenDecimals
+    )
+  );
+
+  const depositedLPValue = `${depositedValue}LP`;
+
+  const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(1)}$`;
+
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
-        <LabeledStat
-          value={formatDecimals(
-            byDecimals(
-              sharesBalance.multipliedBy(new BigNumber(pool.rewardPerFullShare)),
-              pool.tokenDecimals
-            )
-          )}
-          //TODO: Add translation
-          label={'BALLE Earned'}
-        />
+        <LabeledStat value={balleEarned} label={t('balle-earned')} />
         <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
         <LabeledStat
-          value={formatDecimals(
-            byDecimals(
-              sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
-              pool.tokenDecimals
-            )
-          )}
+          value={depositedLPValue}
+          secondValue={depositedDolarValue}
           label={t('Vault-Deposited')}
         />
       </div>
+
       <div className={classes.buttonsContainer}>
         <BalleButton onClick={handleDepositSectionOpen}>{t('Vault-DepositButton')}</BalleButton>
         <BalleButton isOutlined onClick={handleWithdrawSectionOpen}>

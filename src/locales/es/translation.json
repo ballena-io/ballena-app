@@ -1,4 +1,5 @@
 {
+  "balle-earned": "BALLE generado",
   "Disclaimer": "Usar Smart Contracts, Tokens y Crypto es siempre un riesgo. Haz tu propio análisis antes de invertir.",
   "disclaimer-construction": "AVISO: Estamos en modo construcción, no uses la plataforma si ves esto. Estamos preparando algo gordo.",
   "disclaimer-launching_OK": "Estamos en fase Beta. Todos los Vaults generan el token BALLE y tienen Compound automático. El Staking de BALLE esta al caer, síguenos en la redes para enterarte el primero. Pronto actualizaremos el APY con estos datos y podrás ver información más completa sobre tus finanzas en ballena.io. Consulta la documentación para más detalles",
@@ -6,7 +7,7 @@
   "Network-Error": "Error de Conexión",
   "network-error-message": "Revisa la configuración de tu cartera y conéctala de nuevo. Asegurate de usar la red Binance Smart Chain.",
   "Vault-Wallet": "Cartera",
-  "Vault-Balance": "Balance",
+  "Vault-Balance": "Disponible",
   "Vault-APY": "APY",
   "Vault-APYDaily": "Diario",
   "Vault-TVL": "TVL",
