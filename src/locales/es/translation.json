@@ -1,7 +1,8 @@
 {
   "Disclaimer": "Usar Smart Contracts, Tokens y Crypto es siempre un riesgo. Haz tu propio análisis antes de invertir.",
   "disclaimer-construction": "AVISO: Estamos en modo construcción, no uses la plataforma si ves esto. Estamos preparando algo gordo.",
-  "disclaimer-launching": "Estamos en fase Beta. Todos los Vaults generan el token BALLE y tienen Compound automático. El Staking de BALLE esta al caer, síguenos en la redes para enterarte el primero. Pronto actualizaremos el APY con estos datos y podrás ver información más completa sobre tus finanzas en ballena.io. Consulta la documentación para más detalles",
+  "disclaimer-launching_OK": "Estamos en fase Beta. Todos los Vaults generan el token BALLE y tienen Compound automático. El Staking de BALLE esta al caer, síguenos en la redes para enterarte el primero. Pronto actualizaremos el APY con estos datos y podrás ver información más completa sobre tus finanzas en ballena.io. Consulta la documentación para más detalles",
+  "disclaimer-launching": "Las recompensas de BALLE en todas las bóvedas están pausadas debido a un problema con el retiro (solamente para las recompensas de BALLE, los LP funcionan correctamente). Pedimos disculpas y pronto publicaremos nuevas bóvedas. Habrá un período prolongado de recompensas adicionales como compensación. Síguenos en nuestras redes sociales para recibir actualizaciones.",
   "Network-Error": "Error de Conexión",
   "network-error-message": "Revisa la configuración de tu cartera y conéctala de nuevo. Asegurate de usar la red Binance Smart Chain.",
   "Vault-Wallet": "Cartera",
