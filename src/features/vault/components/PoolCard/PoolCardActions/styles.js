@@ -20,6 +20,10 @@ const styles = theme => ({
   footer: {
     width: '100%',
   },
+  retiredWithdrawButton: {
+    backgroundColor: 'white',
+    width: '100%',
+  },
   statsActionsRow: {
     display: 'flex',
     paddingBottom: '12px',

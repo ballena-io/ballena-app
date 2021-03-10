@@ -83,10 +83,14 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
       </div>
 
       <div className={classes.buttonsContainer}>
-        <BalleButton disabled={pool.status === 'eol'} onClick={handleDepositSectionOpen}>
-          {t('Vault-DepositButton')}
-        </BalleButton>
-        <BalleButton isOutlined onClick={handleWithdrawSectionOpen}>
+        {pool.status !== 'eol' && (
+          <BalleButton onClick={handleDepositSectionOpen}>{t('Vault-DepositButton')}</BalleButton>
+        )}
+        <BalleButton
+          className={pool.status === 'eol' && classes.retiredWithdrawButton}
+          isOutlined={pool.status !== 'eol'}
+          onClick={handleWithdrawSectionOpen}
+        >
           {t('Vault-WithdrawButton')}
         </BalleButton>
       </div>
