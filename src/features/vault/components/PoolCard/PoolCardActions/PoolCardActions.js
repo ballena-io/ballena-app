@@ -52,8 +52,6 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
     setOpenWithdrawSection(false);
   };
 
-  // console.log('POOL: ', pool);
-
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
@@ -64,7 +62,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
               pool.tokenDecimals
             )
           )}
-          // label={t('Vault-Deposited')}
+          //TODO: Add translation
           label={'BALLE Earned: '}
         />
         <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
