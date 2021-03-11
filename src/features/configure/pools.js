@@ -1,4 +1,30 @@
 export const pools = [
+
+  {
+    id: 'cake-balbt-bnb',
+    logo: 'cake/balbt-bnb.svg',
+    name: 'bALBT-BNB LP',
+    token: 'bALBT-BNB LP',
+    tokenDescription: 'Uses: Pancake',
+    tokenAddress: '0xbe14f3a89A4F7f279Af9d99554cf12E8C29dB921',
+    tokenDecimals: 18,
+    tokenDescriptionUrl: '#',
+    earnedToken: 'ballePancakeBALBT-BNB',
+    earnedTokenAddress: '0x305db2e59FCE4Bc02a196A28942FBF538E99645C',
+    earnContractAddress: '0x305db2e59FCE4Bc02a196A28942FBF538E99645C',
+    pricePerFullShare: 1,
+    rewardPerFullShare: 0,
+    tvl: 0,
+    oracle: 'pancake-lp',
+    oracleId: 'cake-balbt-bnb',
+    oraclePrice: 0,
+    depositsPaused: false,
+    status: 'active',
+    platform: 'Pancake',
+    assets: ['bALBT', 'BNB'],
+    callFee: 0.0,
+  },
+
   {
     id: 'cake-balbt-bnb',
     logo: 'cake/balbt-bnb.svg',
@@ -73,31 +99,5 @@ export const pools = [
     assets: ['INJ', 'BNB'],
     callFee: 0.0,
   },
-
-  {
-    id: 'cake-balbt-bnb',
-    logo: 'cake/balbt-bnb.svg',
-    name: 'bALBT-BNB LP',
-    token: 'bALBT-BNB LP',
-    tokenDescription: 'Uses: Pancake',
-    tokenAddress: '0xbe14f3a89A4F7f279Af9d99554cf12E8C29dB921',
-    tokenDecimals: 18,
-    tokenDescriptionUrl: '#',
-    earnedToken: 'ballePancakeBALBT-BNB',
-    earnedTokenAddress: '0x71DA59ae59a57fb740F403A134DFcF1A1280870f',
-    earnContractAddress: '0x71DA59ae59a57fb740F403A134DFcF1A1280870f',
-    pricePerFullShare: 1,
-    rewardPerFullShare: 0,
-    tvl: 0,
-    oracle: 'pancake-lp',
-    oracleId: 'cake-balbt-bnb',
-    oraclePrice: 0,
-    depositsPaused: false,
-    status: 'active',
-    platform: 'Pancake',
-    assets: ['bALBT', 'BNB'],
-    callFee: 0.0,
-  },
-
   
 ];
