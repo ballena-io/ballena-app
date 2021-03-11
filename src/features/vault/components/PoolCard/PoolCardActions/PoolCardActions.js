@@ -66,12 +66,12 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
     )
   );
 
-  const depositedLPValue = `${depositedValue}LP`;
-  const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(1)}$`;
+  const depositedLPValue = `${depositedValue.toFixed(6)}LP`;
+  const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(2)}$`;
 
   const balanceValue = formatDecimals(balanceSingle);
-  const balanceLPValue = `${balanceValue}LP`;
-  const balanceDolarValue = `${balanceValue * pool.oraclePrice}$`;
+  const balanceLPValue = `${balanceValue.toFixed(6)}LP`;
+  const balanceDolarValue = `${(balanceValue * pool.oraclePrice).toFixed(2)}$`;
 
   return (
     <div className={classes.footer}>
