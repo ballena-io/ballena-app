@@ -66,11 +66,13 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
     )
   );
 
-  const depositedLPValue = `${depositedValue.toFixed(6)}LP`;
+  console.log(depositedValue);
+
+  const depositedLPValue = `${depositedValue ? depositedValue.toFixed(6) : '...'}LP`;
   const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(2)}$`;
 
   const balanceValue = formatDecimals(balanceSingle);
-  const balanceLPValue = `${balanceValue.toFixed(6)}LP`;
+  const balanceLPValue = `${balanceValue ? balanceValue.toFixed(6) : '...'}LP`;
   const balanceDolarValue = `${(balanceValue * pool.oraclePrice).toFixed(2)}$`;
 
   return (
