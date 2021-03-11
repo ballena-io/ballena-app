@@ -23,7 +23,7 @@
   "Vault-DepositError": "Error al depositar: {{error}}",
   "Vault-DepositsPausedTitle": "Depósitos suspendidos",
   "Vault-DepositsPausedMsg": "Los depositos están suspendidos en esta bóveda.",
-  "Vault-DepositsRetiredTitle": "RETIRADO",
+  "Vault-DepositsRetiredTitle": "RETIRADA",
   "Vault-DepositsRetiredMsg": "Bóveda retirada, retire ya sus fondos",
   "Vault-Withdrawing": "Retirando...",
   "Vault-WithdrawButton": "Retirar",

@@ -7,11 +7,10 @@ const styles = theme => ({
       paddingBottom: '6px',
     },
   },
-  centerContainer: {
+  columnContainer: {
     display: 'flex',
     width: '100%',
     flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
   },
   stat: {
@@ -30,7 +29,7 @@ const styles = theme => ({
     letterSpacing: 0,
     paddingRight: '8px',
   },
-  values: {
+  alignRight: {
     textAlign: 'right',
   },
 });
