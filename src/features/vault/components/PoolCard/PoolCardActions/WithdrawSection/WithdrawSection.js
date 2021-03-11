@@ -105,24 +105,30 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
     }
   };
 
+  const isRetiredStatus = pool.status === 'eol';
+
   return (
     <div className={classes.sliderDetailContainer}>
-      <div className={classes.showDetailLeft}>
-        {t('Vault-Deposited')}:{' '}
-        {byDecimals(
-          sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
-          pool.tokenDecimals
-        ).toFormat(4)}{' '}
-        {pool.token}
-      </div>
-      <FormControl fullWidth variant="outlined">
-        <CustomOutlinedInput value={withdrawAmount.amount} onChange={onInputChange} />
-      </FormControl>
-      <CustomSlider
-        aria-labelledby="continuous-slider"
-        value={withdrawAmount.slider}
-        onChange={onSliderChange}
-      />
+      {!isRetiredStatus && (
+        <>
+          <div className={classes.showDetailLeft}>
+            {t('Vault-Deposited')}:{' '}
+            {byDecimals(
+              sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
+              pool.tokenDecimals
+            ).toFormat(4)}{' '}
+            {pool.token}
+          </div>
+          <FormControl fullWidth variant="outlined">
+            <CustomOutlinedInput value={withdrawAmount.amount} onChange={onInputChange} />
+          </FormControl>
+          <CustomSlider
+            aria-labelledby="continuous-slider"
+            value={withdrawAmount.slider}
+            onChange={onSliderChange}
+          />
+        </>
+      )}
       <div className={classes.showDetailButtonCon}>
         {pool.status === 'refund' ? (
           <RefundButtons
@@ -132,16 +138,18 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
           />
         ) : (
           <>
-            <Button
-              className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
-              type="button"
-              color="primary"
-              onClick={() => onWithdraw(false)}
-            >
-              {fetchWithdrawPending[index]
-                ? `${t('Vault-Withdrawing')}`
-                : `${t('Vault-WithdrawButton')}`}
-            </Button>
+            {!isRetiredStatus && (
+              <Button
+                className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
+                type="button"
+                color="primary"
+                onClick={() => onWithdraw(false)}
+              >
+                {fetchWithdrawPending[index]
+                  ? `${t('Vault-Withdrawing')}`
+                  : `${t('Vault-WithdrawButton')}`}
+              </Button>
+            )}
             <Button
               className={`${classes.showDetailButton} ${classes.showDetailButtonOutlined}`}
               type="button"
