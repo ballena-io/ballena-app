@@ -67,19 +67,34 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   );
 
   const depositedLPValue = `${depositedValue}LP`;
-
   const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(1)}$`;
+
+  const balanceValue = formatDecimals(balanceSingle);
+  const balanceLPValue = `${balanceValue}LP`;
+  const balanceDolarValue = `${balanceValue * pool.oraclePrice}$`;
 
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
         <LabeledStat value={balleEarned} label={t('balle-earned')} />
-        <LabeledStat value={formatDecimals(balanceSingle)} label={t('Vault-Balance')} />
-        <LabeledStat
-          value={depositedLPValue}
-          secondValue={depositedDolarValue}
-          label={t('Vault-Deposited')}
-        />
+        <div className={classes.balances}>
+          <div>
+            <LabeledStat
+              columnDirection
+              value={balanceLPValue}
+              secondValue={balanceDolarValue}
+              label={t('Vault-Balance')}
+            />
+          </div>
+          <div className={classes.alignRight}>
+            <LabeledStat
+              columnDirection
+              value={depositedLPValue}
+              secondValue={depositedDolarValue}
+              label={t('Vault-Deposited')}
+            />
+          </div>
+        </div>
       </div>
 
       <div className={classes.buttonsContainer}>
