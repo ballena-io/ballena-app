@@ -26,7 +26,7 @@ export const pools = [
   },
 
   {
-    id: 'cake-balbt-bnb',
+    id: 'cake-balbt-bnb-old',
     logo: 'cake/balbt-bnb.svg',
     name: 'bALBT-BNB LP',
     token: 'bALBT-BNB LP',
