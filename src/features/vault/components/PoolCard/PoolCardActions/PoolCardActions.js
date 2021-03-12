@@ -66,7 +66,6 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
     )
   );
 
-  // const depositedLPValue = `${depositedValue ? depositedValue.toFixed(6) : '...'}LP`;
   const depositedLPValue = `${depositedValue ? depositedValue : '0'}LP`;
   const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(2)}$`;
 
@@ -78,7 +77,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   return (
     <div className={classes.footer}>
       <div className={classes.statsActionsRow}>
-        <LabeledStat value={balleEarned} label={t('balle-earned')} />
+        <LabeledStat value={!isNaN(balleEarned) ? balleEarned : 0} label={t('balle-earned')} />
         <div className={classes.balances}>
           <div>
             <LabeledStat
