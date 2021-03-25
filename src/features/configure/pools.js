@@ -1,4 +1,5 @@
 export const pools = [
+
   {
     id: 'cake-balbt-bnb',
     logo: 'cake/balbt-bnb.svg',
@@ -18,7 +19,7 @@ export const pools = [
     oracleId: 'cake-balbt-bnb',
     oraclePrice: 0,
     depositsPaused: false,
-    status: 'active',
+    status: 'eol',
     platform: 'Pancake',
     assets: ['bALBT', 'BNB'],
     callFee: 0.0,
@@ -43,7 +44,7 @@ export const pools = [
     oracleId: 'cake-dot-bnb',
     oraclePrice: 0,
     depositsPaused: false,
-    status: 'active',
+    status: 'eol',
     platform: 'Pancake',
     assets: ['DOT', 'BNB'],
     callFee: 0.0,
@@ -68,11 +69,10 @@ export const pools = [
     oracleId: 'cake-inj-bnb',
     oraclePrice: 0,
     depositsPaused: false,
-    status: 'active',
+    status: 'eol',
     platform: 'Pancake',
     assets: ['INJ', 'BNB'],
     callFee: 0.0,
   },
-
   
 ];

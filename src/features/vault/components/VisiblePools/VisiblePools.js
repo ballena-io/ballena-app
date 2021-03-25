@@ -45,7 +45,7 @@ const VisiblePools = ({ pools, tokens, apys }) => {
             index={index}
             tokens={tokens}
             apy={apys[pool.id] || 0}
-            key={pool.id}
+            key={`${pool.id}-status_${pool.status}`}
           />
         ))}
       </div>

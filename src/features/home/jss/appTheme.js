@@ -17,6 +17,7 @@ const createTheme = isNightMode =>
   createMuiTheme({
     palette: {
       ACCENT_BLUE,
+      BRIGHT_BLUE,
       DARK_BLUE,
       accentBlueBorder: ACCENT_BLUE_BORDER,
       type: isNightMode ? 'dark' : 'light',
@@ -27,7 +28,7 @@ const createTheme = isNightMode =>
         secondary: isNightMode ? DARK_MODE_MEDIUM_BLUE : MEDIUM_BLUE,
         dark: isNightMode ? DARK_BLUE : DARK_BLUE,
         paused: isNightMode ? '#2B2A5A' : '#FCE57E',
-        retired: '#4D0101',
+        retired: isNightMode ? '#330b0b' : '#ffbdbd',
         hover: isNightMode ? DARK_BLUE : ACCENT_BLUE,
         border: isNightMode ? DARK_MODE_ACCENT_BLUE : ACCENT_BLUE,
         cardFooter: isNightMode ? DARK_BLUE : MEDIUM_BLUE,

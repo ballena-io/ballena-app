@@ -1,7 +1,14 @@
 const styles = theme => ({
+  alignRight: {
+    textAlign: 'right',
+  },
   dialogTitleContainer: {
     margin: 0,
     padding: theme.spacing(2),
+  },
+  balances: {
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   buttonsContainer: {
     display: 'flex',
@@ -18,6 +25,10 @@ const styles = theme => ({
     color: theme.palette.ACCENT_BLUE,
   },
   footer: {
+    width: '100%',
+  },
+  retiredWithdrawButton: {
+    backgroundColor: 'white',
     width: '100%',
   },
   statsActionsRow: {
