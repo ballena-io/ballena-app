@@ -49,12 +49,12 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
   );
 
   const depositedLPValue = `${depositedValue || '0'}LP`;
-  const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(2)}$`;
+  // const depositedDolarValue = `${(depositedValue * pool.oraclePrice).toFixed(2)}$`;
 
   const balanceValue = formatDecimals(balanceSingle);
 
   const balanceLPValue = `${balanceValue || '0'}LP`;
-  const balanceDolarValue = `${(balanceValue * pool.oraclePrice).toFixed(2)}$`;
+  // const balanceDolarValue = `${(balanceValue * pool.oraclePrice).toFixed(2)}$`;
 
   return (
     <div className={classes.footer}>
@@ -65,7 +65,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
             <LabeledStat
               columnDirection
               value={balanceLPValue}
-              secondValue={balanceDolarValue}
+              // secondValue={balanceDolarValue}
               label={t('Vault-Balance')}
             />
           </div>
@@ -73,7 +73,7 @@ const PoolCardActions = ({ pool, balanceSingle, index, sharesBalance }) => {
             <LabeledStat
               columnDirection
               value={depositedLPValue}
-              secondValue={depositedDolarValue}
+              // secondValue={depositedDolarValue}
               label={t('Vault-Deposited')}
             />
           </div>
