@@ -12,7 +12,7 @@ const styles = theme => ({
     background: theme.palette.background.paused,
   },
   detailsRetired: {
-    background: theme.palette.background.retired,
+    opacity: 0.5,
   },
   expand: {
     transform: 'rotate(0deg)',

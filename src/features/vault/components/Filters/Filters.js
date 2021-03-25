@@ -69,7 +69,7 @@ const Filters = ({
           className={classes.label}
           control={
             <Switch
-              checked={!filters.hideDecomissioned}
+              checked={filters.hideDecomissioned}
               onChange={() => toggleFilter('hideDecomissioned')}
               name="hideDecomissioned"
               color="primary"
